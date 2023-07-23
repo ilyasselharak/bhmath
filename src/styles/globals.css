@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  width: 90%;
+  margin: 0 auto ;
+}
+.list1{
+  display: none;
+}
+.dropdown-trigger:hover .list1{
+display: block;
+}
+
