@@ -29,12 +29,19 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col gap-3 w-full">
-          <div className="bg-orange-600 hover:text-black py-3 cursor-pointer px-8 text-center text-white font-bold">
-            <Link href={"/secondary"}> التعليم الثانوي التأهيلي</Link>
-          </div>
-          <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            <Link href={"/secondary/class2"}>الجذع مشترك</Link>
-          </div>
+          <Link
+            href={"/secondary"}
+            className="bg-orange-600 hover:text-black py-3 cursor-pointer px-8 text-center text-white font-bold"
+          >
+            التعليم الثانوي التأهيلي
+          </Link>
+
+          <Link
+            href={"/secondary/class1"}
+            className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold"
+          >
+            الجذع مشترك
+          </Link>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
             <Link href={"/secondary/class2"}>أولى باكالوريا</Link>
           </div>
