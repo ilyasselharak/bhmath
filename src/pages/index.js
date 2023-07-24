@@ -33,13 +33,13 @@ export default function Home() {
             <Link href={"/secondary"}> التعليم الثانوي التأهيلي</Link>
           </div>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            الجذع مشترك
+            <Link href="/secondary/class2">الجذع مشترك</Link>
           </div>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            أولى باكالوريا
+            <Link href="/secondary/class2">أولى باكالوريا</Link>
           </div>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            الثانيا باكالوريا
+            <Link href="/secondary/class3">الثانية باكالوريا</Link>
           </div>
         </div>
       </main>
