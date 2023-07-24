@@ -19,13 +19,13 @@ export default function Home() {
             <Link href={"/college"}> التعليم الثانوي الاعدادي</Link>
           </div>
           <div className="bg-violet-400 hover:text-white hover:bg-green-700 cursor-pointer py-3 px-8 text-center text-black font-bold">
-            السنة الاولى إعدادي
+            <Link href={"/college/class1"}> السنة الاولى إعدادي</Link>
           </div>
           <div className="bg-violet-400 hover:text-white hover:bg-green-700 cursor-pointer py-3 px-8 text-center text-black font-bold">
-            السنة الثانية اعدادي
+            <Link href={"/college/class2"}> السنة الثانية اعدادي</Link>
           </div>
           <div className="bg-violet-400 hover:text-white hover:bg-green-700 cursor-pointer py-3 px-8 text-center text-black font-bold">
-            السنةالثالثة اعدادي
+            <Link href={"/college/class3"}>السنةالثالثة اعدادي</Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 w-full">
