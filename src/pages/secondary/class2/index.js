@@ -10,10 +10,11 @@ export default function index() {
       <MainHeader />
       <NavHeader />
       <main className="border-2 border-green-800 p-3 mt-8">
-        <h4 className="font-bold text-xl">دروس وتمارين وفروض الجذع المشترك</h4>
+        <h4 className="font-bold text-xl">
+          دروس وتمارين تفاعلية الأولى باكالوريا.
+        </h4>
         <p className="mt-3">
-          دروس وتمارين وفروض محروسة وفروض منزلية لتلاميذ الجذع المشترك، للدورتين
-          الأولى والثانية وفق مقرر وزارة التربية الوطنية المغربية.
+          دروس وتمارين تفاعلية في مختلف المواد لتلاميذ الأولى باكالوريا.
         </p>
         <div className="mt-4 bg-green-400 py-2 text-white pr-2">
           المرجو اختيار قسم فرعي:

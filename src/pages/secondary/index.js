@@ -28,7 +28,7 @@ export default function index() {
             <Link href="/secondary/class2">اولى باكالوريا</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            ثانية باكالوريا
+            <Link href="/secondary/class3">ثانية باكالوريا</Link>
           </div>
         </div>
       </main>
