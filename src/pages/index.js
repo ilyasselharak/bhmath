@@ -19,27 +19,34 @@ export default function Home() {
             <Link href={"/college"}> التعليم الثانوي الاعدادي</Link>
           </div>
           <div className="bg-violet-400 hover:text-white hover:bg-green-700 cursor-pointer py-3 px-8 text-center text-black font-bold">
-            السنة الاولى إعدادي
+            <Link href={"/college/class1"}> السنة الاولى إعدادي</Link>
           </div>
           <div className="bg-violet-400 hover:text-white hover:bg-green-700 cursor-pointer py-3 px-8 text-center text-black font-bold">
-            السنة الثانية اعدادي
+            <Link href={"/college/class2"}> السنة الثانية اعدادي</Link>
           </div>
           <div className="bg-violet-400 hover:text-white hover:bg-green-700 cursor-pointer py-3 px-8 text-center text-black font-bold">
-            السنةالثالثة اعدادي
+            <Link href={"/college/class3"}>السنةالثالثة اعدادي</Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 w-full">
-          <div className="bg-orange-600 hover:text-black py-3 cursor-pointer px-8 text-center text-white font-bold">
-            <Link href={"/secondary"}> التعليم الثانوي التأهيلي</Link>
-          </div>
-          <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
+          <Link
+            href={"/secondary"}
+            className="bg-orange-600 hover:text-black py-3 cursor-pointer px-8 text-center text-white font-bold"
+          >
+            التعليم الثانوي التأهيلي
+          </Link>
+
+          <Link
+            href={"/secondary/class1"}
+            className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold"
+          >
             الجذع مشترك
+          </Link>
+          <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
+            <Link href={"secondary/class2"}>أولى باكالوريا</Link>
           </div>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            أولى باكالوريا
-          </div>
-          <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            الثانيا باكالوريا
+            <Link href={"/secondary/class3"}>الثانية باكالوريا</Link>
           </div>
         </div>
       </main>
