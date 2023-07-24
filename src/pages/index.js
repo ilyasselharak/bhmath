@@ -43,7 +43,7 @@ export default function Home() {
             الجذع مشترك
           </Link>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            <Link href={"/secondary/class2"}>أولى باكالوريا</Link>
+            <Link href={"secondary/class2"}>أولى باكالوريا</Link>
           </div>
           <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
             <Link href={"/secondary/class3"}>الثانية باكالوريا</Link>
