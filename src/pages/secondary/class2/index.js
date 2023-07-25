@@ -1,6 +1,7 @@
 import MainHeader from "@/components/MainHeader";
 import NavHeader from "@/components/NavHeader";
 import TopHeader from "@/components/TopHeader";
+import Link from "next/link";
 import React from "react";
 
 export default function index() {
@@ -21,19 +22,19 @@ export default function index() {
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            SVT/PC
+            <Link href={"/secondary/class2/SVT-PC"}>SVT/PC</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            Math
+          <Link href={"/secondary/class2/MATH"}>Math</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            أولى باك اداب و علوم انسانية
+          <Link href={"/secondary/class2/Lettre"}>أولى باك اداب و علوم انسانية</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            أولى باك تكنولوجي
+          <Link href={"/secondary/class2/TCT"}>أولى باك تكنولوجي</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            أولى باك اقتصاد
+          <Link href={"/secondary/class2/Eco"}>أولى باك اقتصاد</Link>
           </div>
         </div>
       </main>

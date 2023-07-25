@@ -38,13 +38,13 @@ export default function NavHeader() {
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">
             <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pr-2">
-              الجذع مشترك
+              <Link href={"/secondary/class1"}>الجذع مشترك</Link>
             </li>
             <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-              الأولى باكالوريا
+              <Link href={"/secondary/class2"}>الأولى باكالوريا</Link>
             </li>
             <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-              الثالثة باكالوريا
+              <Link href={"/secondary/class3"}>الثالثة باكالوريا</Link>
             </li>
           </ul>
         </div>

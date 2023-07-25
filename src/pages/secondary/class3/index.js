@@ -1,6 +1,7 @@
 import MainHeader from "@/components/MainHeader";
 import NavHeader from "@/components/NavHeader";
 import TopHeader from "@/components/TopHeader";
+import Link from "next/link";
 import React from "react";
 
 export default function index() {
@@ -21,22 +22,24 @@ export default function index() {
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            SVT/PC
+            <Link href={"/secondary/class3/SVT-PC"}>SVT/PC</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            Math A
+            <Link href={"/secondary/class3/MATHA"}>Math A</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            Math B
+            <Link href={"/secondary/class3/MATHB"}>Math B</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            ثانية باك باك اداب و علوم انسانية
+            <Link href={"/secondary/class3/Lettre"}>
+              ثانية باك باك اداب و علوم انسانية
+            </Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            ثانية باك تكنولوجي
+            <Link href={"/secondary/class3/TCT"}> ثانية باك تكنولوجي</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            ثانية باك اقتصاد
+            <Link href={"/secondary/class3/ECO"}>ثانية باك اقتصاد</Link>
           </div>
         </div>
       </main>
