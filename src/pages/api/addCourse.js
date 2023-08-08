@@ -1,5 +1,5 @@
 import { initMongoose } from "@/lib/mongoose";
-import Second_Collegue_Course from "@/modules/SecondCollegueCourses";
+import Third_Collegue_Course from "@/modules/ThirdCollegueCourses";
 
 export default async function handle(req,res){
     await initMongoose();
@@ -8,7 +8,7 @@ export default async function handle(req,res){
         return;
     }
     const {name,courseLink,exersiceLink} = req.body;
-    const addCourse = await Second_Collegue_Course.create({
+    const addCourse = await Third_Collegue_Course.create({
         name:name,
         courseLink:courseLink,
         exerciseLink:exersiceLink,

@@ -5,12 +5,12 @@ import MainHeader from "@/components/MainHeader";
 import NavHeader from "@/components/NavHeader";
 import Link from "next/link";
 import { initMongoose } from "@/lib/mongoose";
-import {  find_second_Collegue_Course } from "./api/first_Collegue_course";
+import {  find_Second_Collegue_Course } from "./api/first_Collegue_course";
 
 const inter = Inter({ subsets: ["latin"] });
 export async function getServerSideProps() {
   await initMongoose();
-  const courses = await find_second_Collegue_Course();
+  const courses = await find_Second_Collegue_Course();
 
   return {
     props: {
