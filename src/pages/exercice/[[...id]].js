@@ -1,15 +1,16 @@
 import { initMongoose } from '@/lib/mongoose';
 import { useRouter } from 'next/router'
 import React from 'react'
-import {  find_First_Collegue_Course } from '../api/first_Collegue_course';
+import {  find_First_Collegue_Course, find_First_Lycee_Course } from '../api/first_Collegue_course';
 import Link from 'next/link';
 
 
 export async function getServerSideProps({params}) {
 
   await initMongoose();
-  const courses = await find_First_Collegue_Course();
- const filtred = params.id[1] ? courses.filter(item=>item.name==params.id[1]):{}
+  const courses = await find_First_Lycee_Course();
+ const filtred = params.id[1] ? courses.filter(item=>item.name.trim()==params.id[1]):{}
+ console.log(filtred)
   return {
     props: {
       course: JSON.parse(JSON.stringify(courses)),
