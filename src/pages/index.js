@@ -65,10 +65,10 @@ export default function Home({course}) {
         </div>
       </main>  */}
    <div className="flex justify-center">
- <iframe src={course[0].courseLink} width="640" height="580" allow="autoplay" ></iframe><br/>
+ {/* <iframe src={course[0].courseLink} width="640" height="580" allow="autoplay" ></iframe><br/>
  <iframe src={course[0].exerciseLink} width="640" height="580" allow="autoplay" ></iframe><br/> 
 
-  <iframe width={"700px"} height={"600px"} src="https://docs.google.com/document/d/e/2PACX-1vTMsDGcDTnnxBoqSyW30M7V9A9reaF6UeFFwzrD2KfGQqZWgFlWg-4xT0k2Q34Qig/pub?embedded=true"></iframe> 
+  <iframe width={"700px"} height={"600px"} src="https://docs.google.com/document/d/e/2PACX-1vTMsDGcDTnnxBoqSyW30M7V9A9reaF6UeFFwzrD2KfGQqZWgFlWg-4xT0k2Q34Qig/pub?embedded=true"></iframe>  */}
 </div>
       <form  action="/api/addCourse" method="POST" className="flex md:flex-row gap-x-4 flex-col  mt-8">
       <div className="flex gap-x-4 items-center">اسم الدرس <input id="name"
