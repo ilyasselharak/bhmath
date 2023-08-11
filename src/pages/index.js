@@ -23,7 +23,7 @@ export default function Home({course}) {
   return (
     <>
 
-{/*     
+    
        <TopHeader />
       <MainHeader />
       <NavHeader />
@@ -63,35 +63,16 @@ export default function Home({course}) {
             <Link href={"/secondary/class3"}>الثانية باكالوريا</Link>
           </div>
         </div>
-      </main>  */}
-   <div className="flex justify-center">
- {/* <iframe src={course[0].courseLink} width="640" height="580" allow="autoplay" ></iframe><br/>
+      </main>  
+      <div className="mt-16 text-center"><Link className="text-4xl bg-green-400 p-4 text-white " href={"/addCourse"}>Ajouter  des courses</Link></div>
+  {/* <div className="flex justify-center">
+  <iframe src={course[0].courseLink} width="640" height="580" allow="autoplay" ></iframe><br/>
  <iframe src={course[0].exerciseLink} width="640" height="580" allow="autoplay" ></iframe><br/> 
 
-  <iframe width={"700px"} height={"600px"} src="https://docs.google.com/document/d/e/2PACX-1vTMsDGcDTnnxBoqSyW30M7V9A9reaF6UeFFwzrD2KfGQqZWgFlWg-4xT0k2Q34Qig/pub?embedded=true"></iframe>  */}
-</div>
-
-n oublier pas lordre des courses
-<div>1 bac pc-svt</div>
-      <form  action="/api/addCourse" method="POST" className="flex md:flex-row gap-x-4 flex-col  mt-8">
-      <div className="flex gap-x-4 items-center">nom course :<input id="name"
-              name="name" className="border border-gray-400" placeholder="اسم الدرس"/></div>
-      <div className="flex gap-x-4 items-center">lien de courses :<input id="courseLink"
-              name="courseLink"  className="border border-gray-400" placeholder="رابط الدرس"/></div>
-      <div className="flex gap-x-4 items-center">lien d'exercice :<input id="exersiceLink"
-              name="exersiceLink" className="border border-gray-400" placeholder="رابط التمرين"/></div>
-      <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
-      </form>  
-      <div className="mt-16">1 bac math</div>
-      <form  action="/api/addCourse1" method="POST" className="flex md:flex-row gap-x-4 flex-col  mt-8">
-      <div className="flex gap-x-4 items-center">nom course :<input id="name"
-              name="name" className="border border-gray-400" placeholder="اسم الدرس"/></div>
-      <div className="flex gap-x-4 items-center">lien de courses :<input id="courseLink"
-              name="courseLink"  className="border border-gray-400" placeholder="رابط الدرس"/></div>
-      <div className="flex gap-x-4 items-center">lien d'exercice :<input id="exersiceLink"
-              name="exersiceLink" className="border border-gray-400" placeholder="رابط التمرين"/></div>
-      <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
-      </form>  
+  <iframe width={"700px"} height={"600px"} src="https://docs.google.com/document/d/e/2PACX-1vTMsDGcDTnnxBoqSyW30M7V9A9reaF6UeFFwzrD2KfGQqZWgFlWg-4xT0k2Q34Qig/pub?embedded=true"></iframe>
+</div>  */}
+{/* 
+   */}
     </>
   );
 }

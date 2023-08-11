@@ -11,40 +11,40 @@ export default function NavHeader() {
         </div>
 
         <div className="p-4 hover:bg-green-700  dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
-          <Link href={"/college"}>التعليم الثانوي الاعدادي</Link>
+          <Link href={"/college"}>collège</Link>
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">
             <Link href={"/college/class1"}>
               {" "}
               <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pr-2">
-                الاولى اعدادي
+              1ère Année Collège
               </li>
             </Link>
             <Link href={"/college/class2"}>
               <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-                الثانية اعدادي
+              2ème Année Collège
               </li>
             </Link>
             <Link href={"/college/class3"}>
               {" "}
               <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-                الثالثة اعدادي
+              3ème Année Collège
               </li>
             </Link>
           </ul>
         </div>
         <div className="p-4 hover:bg-green-700   dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
-          <Link href={"/secondary"}>التعليم الثانوي التأهيلي</Link>
+          <Link href={"/secondary"}>Lycée</Link>
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">
             <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pr-2">
-              <Link href={"/secondary/class1"}>الجذع مشترك</Link>
+              <Link href={"/secondary/class1"}>Tronc commun</Link>
             </li>
             <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-              <Link href={"/secondary/class2"}>الأولى باكالوريا</Link>
+              <Link href={"/secondary/class2"}>1ère Bac</Link>
             </li>
             <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-              <Link href={"/secondary/class3"}>الثالثة باكالوريا</Link>
+              <Link href={"/secondary/class3"}>2ème Bac</Link>
             </li>
           </ul>
         </div>
