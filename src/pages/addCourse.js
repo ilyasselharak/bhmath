@@ -35,6 +35,17 @@ export default function () {
               name="exersiceLink" className="border border-gray-400" placeholder="رابط التمرين"/></div>
       <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
       </form>  
+      <div className="mt-16">2 bac math</div>
+
+      <form  action="/api/add2bacMath" method="POST" className="flex md:flex-row gap-x-4 flex-col  mt-8">
+      <div className="flex gap-x-4 items-center">nom course :<input id="name"
+              name="name" className="border border-gray-400" placeholder="اسم الدرس"/></div>
+      <div className="flex gap-x-4 items-center">lien de courses :<input id="courseLink"
+              name="courseLink"  className="border border-gray-400" placeholder="رابط الدرس"/></div>
+      <div className="flex gap-x-4 items-center">lien d'exercice :<input id="exersiceLink"
+              name="exersiceLink" className="border border-gray-400" placeholder="رابط التمرين"/></div>
+      <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
+      </form>  
     </div>
   )
 }

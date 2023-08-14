@@ -1,5 +1,5 @@
 import { initMongoose } from "@/lib/mongoose";
-import Secondary_2Bac_Lycee_Pc_Courses from "@/modules/secondary2bacPc";
+import Secondary_2Bac_Lycee_Math_Courses from "@/modules/secondary2bacMath";
 
 
 export default async function handle(req,res){
@@ -9,7 +9,7 @@ export default async function handle(req,res){
         return;
     }
     const {name,courseLink,exersiceLink} = req.body;
-    const addCourse = await Secondary_2Bac_Lycee_Pc_Courses.create({
+    const addCourse = await Secondary_2Bac_Lycee_Math_Courses.create({
         name:name,
         courseLink:courseLink,
         exerciseLink:exersiceLink,
