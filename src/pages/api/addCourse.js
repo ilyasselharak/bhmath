@@ -16,5 +16,5 @@ export default async function handle(req,res){
         
       });
     addCourse.save()
-    return res.redirect(307, '/')
+    return res.redirect(307, '/addCourse')
 }
