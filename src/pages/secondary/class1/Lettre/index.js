@@ -18,7 +18,8 @@ export default function index() {
           بالسنة الأولى من التعليم الثانوي الإعدادي.
         </p>
         <div className="mt-4 bg-green-400 py-2 text-white pr-2">
-          المرجو اختيار قسم فرعي:
+        Veuillez sélectionner une sous-section :
+
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
