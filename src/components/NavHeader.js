@@ -10,40 +10,40 @@ export default function NavHeader() {
           <AiFillHome />
         </div>
 
-        <div className="p-4 hover:bg-green-700  dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
-          <Link href={"/college"}>collège</Link>
+        <div className="px-8 py-4 hover:bg-green-700  dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
+          <Link href={"/college"}>Collège</Link>
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">
             <Link href={"/college/class1"}>
               {" "}
-              <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pr-2">
-              1ère Année Collège
+              <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pl-2">
+              1ère Année 
               </li>
             </Link>
             <Link href={"/college/class2"}>
-              <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-              2ème Année Collège
+              <li className="border-b hover:bg-green-700 border-gray-200 py-3 pl-2">
+              2ème Année 
               </li>
             </Link>
             <Link href={"/college/class3"}>
               {" "}
-              <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
-              3ème Année Collège
+              <li className="border-b hover:bg-green-700 border-gray-200 py-3 pl-2">
+              3ème Année 
               </li>
             </Link>
           </ul>
         </div>
-        <div className="p-4 hover:bg-green-700   dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
+        <div className="px-8 py-4 hover:bg-green-700   dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
           <Link href={"/secondary"}>Lycée</Link>
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">
-            <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pr-2">
-              <Link href={"/secondary/class1"}>Tronc commun</Link>
+            <li className="border-b hover:bg-green-700 border-t border-gray-200 py-3 pl-2">
+              <Link href={"/secondary/class1"}>Tronc Commun</Link>
             </li>
-            <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
+            <li className="border-b hover:bg-green-700 border-gray-200 py-3 pl-2">
               <Link href={"/secondary/class2"}>1ère Bac</Link>
             </li>
-            <li className="border-b hover:bg-green-700 border-gray-200 py-3 pr-2">
+            <li className="border-b hover:bg-green-700 border-gray-200 py-3 pl-2">
               <Link href={"/secondary/class3"}>2ème Bac</Link>
             </li>
           </ul>
