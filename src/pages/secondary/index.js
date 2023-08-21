@@ -21,15 +21,15 @@ export default function index() {
           المرجو اختيار قسم فرعي:
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href="/secondary/class1">الجذع المشترك</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href="/secondary/class2">اولى باكالوريا</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href="/secondary/class3">ثانية باكالوريا</Link>
-          </div>
+        <Link href="/secondary/class1"><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 ">
+            Tronc Commun
+          </div></Link>
+          <Link href="/secondary/class2"><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 ">
+            1ère Bac
+          </div></Link>
+          <Link href={"/secondary/class3"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 ">
+            2ème Bac
+          </div></Link>
         </div>
       </main>
     </>

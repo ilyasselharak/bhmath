@@ -25,7 +25,7 @@ export default function index() {
             دروس
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            تمارين
+          Exercices
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
             فروض

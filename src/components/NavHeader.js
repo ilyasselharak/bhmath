@@ -10,7 +10,7 @@ export default function NavHeader() {
           <AiFillHome />
         </div>
 
-        <div className="px-8 py-4 hover:bg-green-700  dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
+        <div className="px-12 py-4 hover:bg-green-700  dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
           <Link href={"/college"}>Collège</Link>
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">
@@ -33,7 +33,7 @@ export default function NavHeader() {
             </Link>
           </ul>
         </div>
-        <div className="px-8 py-4 hover:bg-green-700   dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
+        <div className="px-12 py-4 hover:bg-green-700   dropdown-trigger relative flex items-center cursor-pointer border-r border-white">
           <Link href={"/secondary"}>Lycée</Link>
           <AiFillCaretDown />
           <ul className="list1 top-[100%]  bg-green-500 left-0  w-full absolute ">

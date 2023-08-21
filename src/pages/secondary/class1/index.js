@@ -20,17 +20,18 @@ export default function index() {
           المرجو اختيار قسم فرعي:
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class1/Science"}>الجذع المشترك علمي</Link>
+        <Link href={"/secondary/class1/Science"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+            Tronc Commun Science
+          </div></Link>
+          <Link href={"/secondary/class1/TCT"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+           Tronc Commun Technologies
+          </div></Link>
+          <Link href={"/secondary/class1/Lettre"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+            
+              Tronc Commun Lettre
+            
           </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class1/TCT"}>الجذع مشترك تكنولوجي</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class1/Lettre"}>
-              الجذع مشترك الادب و العلوم الانسانية
-            </Link>
-          </div>
+          </Link>
         </div>
       </main>
     </>

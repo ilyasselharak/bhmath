@@ -22,13 +22,13 @@ export default function index() {
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            دروس
+          Lessons
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            تمارين
+          Exercices
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            فروض
+          Devoires
           </div>
         </div>
       </main>
