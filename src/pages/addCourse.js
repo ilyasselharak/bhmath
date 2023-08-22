@@ -21,6 +21,40 @@ export default function () {
               name="devoireLinkSex" className="border border-gray-400" placeholder="devoireLinkSex"/></div>
       <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
       </form>  
+      <div>2 ere anne collegue</div>
+      <form  action="/api/add2devoire" method="POST" className="flex gap-x-4 flex-col  mt-8">
+     
+      <div className="flex gap-x-4 items-center">devoireLinkfirst :<input id="courseLink"
+              name="devoireLinkfirst"  className="border border-gray-400" placeholder="devoireLinkfirst"/></div>
+      <div className="flex gap-x-4 items-center">devoireLinkSecound :<input id="exersiceLink"
+              name="devoireLinkSecound" className="border border-gray-400" placeholder="devoireLinkSecound"/></div>
+<div className="flex gap-x-4 items-center">devoireLinkthird :<input id="exersiceLink"
+              name="devoireLinkthird" className="border border-gray-400" placeholder="devoireLinkthird"/></div>
+              <div className="flex gap-x-4 items-center">devoireLinkforth :<input id="exersiceLink"
+              name="devoireLinkforth" className="border border-gray-400" placeholder="devoireLinkforth"/></div>
+              <div className="flex gap-x-4 items-center">devoireLinkFifth :<input id="exersiceLink"
+              name="devoireLinkFifth" className="border border-gray-400" placeholder="devoireLinkFifth"/></div>
+              <div className="flex gap-x-4 items-center">devoireLinkSex :<input id="exersiceLink"
+              name="devoireLinkSex" className="border border-gray-400" placeholder="devoireLinkSex"/></div>
+      <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
+      </form>  
+      <div>3 ere anne collegue</div>
+      <form  action="/api/add3thirdDevoire" method="POST" className="flex gap-x-4 flex-col  mt-8">
+     
+      <div className="flex gap-x-4 items-center">devoireLinkfirst :<input id="courseLink"
+              name="devoireLinkfirst"  className="border border-gray-400" placeholder="devoireLinkfirst"/></div>
+      <div className="flex gap-x-4 items-center">devoireLinkSecound :<input id="exersiceLink"
+              name="devoireLinkSecound" className="border border-gray-400" placeholder="devoireLinkSecound"/></div>
+<div className="flex gap-x-4 items-center">devoireLinkthird :<input id="exersiceLink"
+              name="devoireLinkthird" className="border border-gray-400" placeholder="devoireLinkthird"/></div>
+              <div className="flex gap-x-4 items-center">devoireLinkforth :<input id="exersiceLink"
+              name="devoireLinkforth" className="border border-gray-400" placeholder="devoireLinkforth"/></div>
+              <div className="flex gap-x-4 items-center">devoireLinkFifth :<input id="exersiceLink"
+              name="devoireLinkFifth" className="border border-gray-400" placeholder="devoireLinkFifth"/></div>
+              <div className="flex gap-x-4 items-center">devoireLinkSex :<input id="exersiceLink"
+              name="devoireLinkSex" className="border border-gray-400" placeholder="devoireLinkSex"/></div>
+      <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
+      </form>
       <div className="mt-16">2 bac lettre</div>
       <form  action="/api/addCourse1" method="POST" className="flex md:flex-row gap-x-4 flex-col  mt-8">
       <div className="flex gap-x-4 items-center">nom course :<input id="name"

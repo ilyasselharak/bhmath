@@ -1,4 +1,5 @@
 import { initMongoose } from "@/lib/mongoose";
+import Second_Collegue_Devoire from "@/modules/devoiresSecondCollegue";
 import First_Collegue_Devoire from "@/modules/devoiresfirstcollegue";
 
 
@@ -10,7 +11,7 @@ export default async function handle(req,res){
         return;
     }
     const {devoireLinkfirst,devoireLinkSecound,devoireLinkthird,devoireLinkforth,devoireLinkFifth,devoireLinkSex} = req.body;
-    const addCourse = await First_Collegue_Devoire.create({
+    const addCourse = await Second_Collegue_Devoire.create({
         
         devoireLinkfirst:devoireLinkfirst,
         devoireLinkSecound:devoireLinkSecound,
