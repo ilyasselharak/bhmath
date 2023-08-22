@@ -11,7 +11,7 @@ export default async function handle(req,res){
     }
     const {name,devoireLinkfirst,devoireLinkSecound,devoireLinkthird,devoireLinkforth,devoireLinkFifth,devoireLinkSex} = req.body;
     const addCourse = await First_Collegue_Devoire.create({
-        name:name,
+        
         devoireLinkfirst:devoireLinkfirst,
         devoireLinkSecound:devoireLinkSecound,
         devoireLinkthird:devoireLinkthird,

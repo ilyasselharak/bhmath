@@ -6,8 +6,7 @@ export default function () {
         n oublier pas lordre des courses
 <div>1 ere anne collegue</div>
       <form  action="/api/add1firstDevoir" method="POST" className="flex gap-x-4 flex-col  mt-8">
-      <div className="flex gap-x-4 items-center">nom course :<input id="name"
-              name="name" className="border border-gray-400" placeholder="اسم الدرس"/></div>
+     
       <div className="flex gap-x-4 items-center">devoireLinkfirst :<input id="courseLink"
               name="devoireLinkfirst"  className="border border-gray-400" placeholder="devoireLinkfirst"/></div>
       <div className="flex gap-x-4 items-center">devoireLinkSecound :<input id="exersiceLink"

@@ -2,7 +2,7 @@
 import {model, models, Schema} from "mongoose";
 
 const FirstCollegueDevoireSchema = new Schema({
-  name: String,
+  
   devoireLinkfirst: String,
   devoireLinkSecound: String,
   devoireLinkthird: String,
