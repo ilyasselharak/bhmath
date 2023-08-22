@@ -28,7 +28,7 @@ export default function index() {
           </div></Link>
           <Link href={"/secondary/class1/Lettre"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
             
-              Tronc Commun Lettre
+           Tronc Commun Lettre
             
           </div>
           </Link>

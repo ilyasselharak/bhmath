@@ -32,14 +32,14 @@ export default function index() {
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
             <Link href={"/secondary/class3/Lettre"}>
-              ثانية باك باك اداب و علوم انسانية
+            2 Bac Lettre
             </Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class3/TCT"}> ثانية باك تكنولوجي</Link>
+            <Link href={"/secondary/class3/TCT"}> 2 Bac Technologie</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class3/ECO"}>ثانية باك اقتصاد</Link>
+            <Link href={"/secondary/class3/ECO"}>2 Bac Economie</Link>
           </div>
         </div>
       </main>

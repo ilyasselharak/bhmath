@@ -1,6 +1,5 @@
 import { initMongoose } from "@/lib/mongoose";
 import Secondary_2Bac_Lycee_Lettre_Courses from "@/modules/secondary2bacLetrre";
-import Secondary_Math_Lycee_Courses from "@/modules/secondaryMathLyceeCourse";
 
 
 export default async function handle(req,res){
