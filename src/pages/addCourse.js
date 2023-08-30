@@ -39,7 +39,7 @@ export default function () {
       <input className="border border-gray-400 bg-green-600 p-3" type={"submit"} value={"اضافة"} />
       </form>  
       <div>3 ere anne collegue</div>
-      <form  action="/api/add3thirdDevoire" method="POST" className="flex gap-x-4 flex-col  mt-8">
+      <form  action="/api/add3thirdDevoir" method="POST" className="flex gap-x-4 flex-col  mt-8">
      
       <div className="flex gap-x-4 items-center">devoireLinkfirst :<input id="courseLink"
               name="devoireLinkfirst"  className="border border-gray-400" placeholder="devoireLinkfirst"/></div>
