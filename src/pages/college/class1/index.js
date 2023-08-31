@@ -27,9 +27,10 @@ export default function index() {
           Lessons
           </div>
           </Link>
+          <Link href={"/exercice/firstCollege"}>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Exercices
-          </div>
+          </div></Link>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Devoires
           </div>
