@@ -38,12 +38,13 @@ export default function index({course,filtred}) {
   
    const router= useRouter()
   return (
-    <div className='flex flex-col gap-y-5'>
-         {course.map((item,index)=><Link key={index} href={`${router.asPath}/${item.name}`}><div  className=' bg-yellow-200 p-4 rounded-md '>{item.name}</div></Link>)}
+    <div>
+       
         
-        {/* {!filtred.length ? <div className='flex flex-col gap-y-5'>
-            {course.map((item,index)=>{return <div key={index} ><Link href={`${router.asPath}/${item.name}`}><div >{item.name}</div></Link></div>})}
-         </div>:<div>{filtred[0].courseLink.split(",,").map(item=>{return <><iframe src={item.trim()} width="640" height="580" allow="autoplay" ></iframe><br/></>})} </div>} */}
+       {filtred.length ? 
+       <div>{filtred[0].courseLink.split(",,").map(item=>{return <><iframe src={item.trim()} width="640" height="580" allow="autoplay" ></iframe><br/></>})} </div>
+        :
+        <div className='flex flex-col gap-y-5'>{course.map((item,index)=><Link key={index} href={`${router.asPath}/${item.name}`}><div  className=' bg-yellow-200 p-4 rounded-md '>{item.name}</div></Link>)}</div>}
     </div>
   )
 }
