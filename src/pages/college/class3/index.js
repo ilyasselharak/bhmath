@@ -26,7 +26,7 @@ export default function index() {
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Lessons
           </div></Link>
-          <Link href={'/course/thirdCollege'}>
+          <Link href={'/exercice/thirdCollege'}>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Exercices
           </div></Link>

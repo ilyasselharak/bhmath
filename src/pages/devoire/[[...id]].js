@@ -23,9 +23,7 @@ export async function getServerSideProps({params}) {
       courses = await find_Third_Collegue_Devoire()
       break
   }
-  // const courses = await find_First_Collegue_Course();
-//  const filtred = params.id[1] ? courses.filter(item=>item.name.trim()==params.id[1]):{}
-
+ 
   return {
     props: {
       course: JSON.parse(JSON.stringify(courses)),

@@ -1,6 +1,7 @@
 import MainHeader from "@/components/MainHeader";
 import NavHeader from "@/components/NavHeader";
 import TopHeader from "@/components/TopHeader";
+import Link from "next/link";
 import React from "react";
 
 export default function index() {
@@ -21,12 +22,14 @@ export default function index() {
           المرجو اختيار قسم فرعي:
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
+        <Link href={'/course/firstBac'}>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
             Lessons
-          </div>
+          </div></Link>
+          <Link href={'/exercice/firstBac'}>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Exercices
-          </div>
+          </div></Link>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Devoires
           </div>

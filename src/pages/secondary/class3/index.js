@@ -36,7 +36,7 @@ export default function index() {
             </Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class3/TCT"}> 2 Bac Technologie</Link>
+            <Link href={"/secondary/class3/TCT"}>2 Bac Technologie</Link>
           </div>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
             <Link href={"/secondary/class3/ECO"}>2 Bac Economie</Link>

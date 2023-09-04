@@ -21,21 +21,21 @@ export default function index() {
           المرجو اختيار قسم فرعي:
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-            <Link href={"/secondary/class2/SVT-PC"}>SVT/PC</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-          <Link href={"/secondary/class2/MATH"}>Math</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-          <Link href={"/secondary/class2/Lettre"}>أولى باك اداب و علوم انسانية</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-          <Link href={"/secondary/class2/TCT"}>أولى باك تكنولوجي</Link>
-          </div>
-          <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
-          <Link href={"/secondary/class2/Eco"}>أولى باك اقتصاد</Link>
-          </div>
+        <Link href={"/secondary/class2/SVT-PC"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+           SVT/PC
+          </div></Link>
+          <Link href={"/secondary/class2/MATH"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+          Math
+          </div></Link>
+          <Link href={"/secondary/class2/Lettre"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+          Lettre
+          </div></Link>
+          <Link href={"/secondary/class2/TCT"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+          Technologie
+          </div></Link>
+          <Link href={"/secondary/class2/Eco"}><div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
+          Economie
+          </div></Link>
         </div>
       </main>
     </>

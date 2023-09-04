@@ -56,12 +56,12 @@ export default function Home({course}) {
           >
             Tronc commun
           </Link>
-          <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            <Link href={"secondary/class2"}>1ère Bac</Link>
-          </div>
-          <div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
-            <Link href={"/secondary/class3"}>2ème Bac</Link>
-          </div>
+          <Link href={"secondary/class2"}><div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
+            1ère Bac
+          </div></Link>
+          <Link href={"/secondary/class3"}><div className="bg-orange-300 hover:text-white hover:bg-green-700 py-3 cursor-pointer px-8 text-center text-black font-bold">
+            2ème Bac
+          </div></Link>
         </div>
       </main>  
       <div className="mt-16 text-center"><Link className="text-4xl bg-green-400 p-4 text-white " href={"/addCourse"}>Ajouter  des courses</Link></div>
