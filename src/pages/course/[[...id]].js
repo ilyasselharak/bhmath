@@ -1,7 +1,7 @@
 import { initMongoose } from '@/lib/mongoose';
 import { useRouter } from 'next/router'
 import React from 'react'
-import { find_First_Collegue_Course, find_Second_Collegue_Course, find_Third_Collegue_Course } from '../api/first_Collegue_course';
+import { find_First_Collegue_Course, find_Second_Collegue_Course, find_Third_Collegue_Course, find_Third_Secondary_Courses } from '../api/first_Collegue_course';
 import Link from 'next/link';
 import { find_First_Secondary_TCT_Course, find_Second_Secondary_Course, find_Second_Secondary_Math_Course } from '../api/first_Secondary_course';
 
@@ -36,7 +36,7 @@ export async function getServerSideProps({params}) {
         courses = await find_Second_Secondary_Math_Course()
         break
     case "2BacPCSVT":
-        courses = await find_Second_Secondary_Course()
+        courses = await find_Third_Secondary_Courses()
         break
   }
   // const courses = await find_First_Collegue_Course();
