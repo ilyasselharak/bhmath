@@ -21,12 +21,14 @@ export default function index() {
           المرجو اختيار قسم فرعي:
         </div>
         <div className="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
+        <Link href={'/course/2BacMath'}>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Lessons
-          </div>
+          </div></Link>
+          <Link href={'/exercice/2BacMath'}>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Exercices
-          </div>
+          </div></Link>
           <div className="bg-green-300 text-center py-3 rounded-md hover:bg-green-600 cursor-pointer">
           Devoires
           </div>

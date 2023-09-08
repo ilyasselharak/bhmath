@@ -32,6 +32,12 @@ export async function getServerSideProps({params}) {
     case "firstBac":
         courses = await find_Second_Secondary_Course()
         break
+    case "2BacMath":
+        courses = await find_Second_Secondary_Math_Course()
+        break
+    case "2BacPCSVT":
+        courses = await find_Second_Secondary_Course()
+        break
   }
   // const courses = await find_First_Collegue_Course();
  const filtred = params.id[1] ? courses.filter(item=>item.name.trim()==params.id[1]):{}
