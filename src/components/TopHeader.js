@@ -2,13 +2,10 @@ import React from "react";
 
 export default function TopHeader() {
   return (
-    <div className="flex gap-x-4 bg-orange-400 mt-3 text-white py-2 pr-2">
-      <div>عن الموقع </div>
-      <div>خريطة الموقع </div>
-      <div>اتصل بنا </div>
-      <div>ارسال دعم</div>
-      <div>سياسة الخصوصية و النشر</div>
-      <div>الدفتر الذهبي </div>
+    <div className="flex gap-x-4 pl-2 rounded-lg bg-orange-400 mt-3 text-white py-2">
+      <div className="cursor-pointer hover:underline">à propos du site Web</div>
+      <div className="cursor-pointer hover:underline">plan du site</div>
+      <div className="cursor-pointer hover:underline">contactez nous</div>
     </div>
   );
 }
