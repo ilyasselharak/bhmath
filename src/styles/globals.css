@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  width: 90%;
-  margin: 0 auto ;
+body {
+  @apply mx-auto w-full md:w-[90%] px-4 md:px-0;
+  margin: 0 auto;
 }
-.list1{
+
+.list1 {
   display: none;
 }
-.dropdown-trigger:hover .list1{
-display: block;
+
+.dropdown-trigger:hover .list1 {
+  display: block;
 }
 
