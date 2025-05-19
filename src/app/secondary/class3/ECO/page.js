@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: '2ème Bac - Sciences Économiques | BHMath',
+  title: '2ème Bac - Sciences Économiques | BHMaths',
   description: 'Ressources mathématiques pour la 2ème année du Baccalauréat - Section Sciences Économiques',
 };
 

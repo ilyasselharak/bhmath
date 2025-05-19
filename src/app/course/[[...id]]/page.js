@@ -58,7 +58,7 @@ async function getCourses(level) {
 export async function generateMetadata({ params }) {
   const level = params.id?.[0];
   return {
-    title: `${levelTitles[level] || 'Cours'} | BHMath`,
+    title: `${levelTitles[level] || 'Cours'} | BHMaths`,
     description: `Ressources et contenus pédagogiques pour ${levelTitles[level] || 'les mathématiques'}`,
   };
 }

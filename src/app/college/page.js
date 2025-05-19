@@ -1,10 +1,7 @@
-import TopHeader from '@/components/TopHeader';
-import MainHeader from '@/components/MainHeader';
-import NavHeader from '@/components/NavHeader';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Collège | BHMath',
+  title: 'Collège | BHMaths',
   description: 'Ressources mathématiques pour le collège',
 };
 

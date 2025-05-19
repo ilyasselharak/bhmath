@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Exercices 3ème Année Collège | BHMath',
+  title: 'Exercices 3ème Année Collège | BHMaths',
   description: 'Exercices et problèmes de mathématiques pour la 3ème année du collège',
 };
 

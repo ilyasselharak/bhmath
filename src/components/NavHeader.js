@@ -1,30 +1,53 @@
-import Link from "next/link";
-import React from "react";
-import { AiFillHome, AiFillCaretDown, AiOutlineSearch } from "react-icons/ai";
+'use client';
 
-const navItems = [
-  { title: 'Accueil', href: '/' },
-  { title: 'Collège', href: '/college' },
-  { title: 'Lycée', href: '/secondary' },
-  { title: 'Exercices', href: '/exercice' },
-  { title: 'Devoirs', href: '/devoire' },
-  { title: 'Concours', href: '/concours' },
-];
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function NavHeader() {
+  const pathname = usePathname();
+
+  const isActive = (path) => {
+    return pathname === path;
+  };
+
   return (
-    <nav className="bg-white border-b">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-center space-x-8">
-          {navItems.map((item, index) => (
+    <nav className="bg-orange-500 rounded-b-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-12">
+          <div className="flex items-center space-x-8">
             <Link
-              key={index}
-              href={item.href}
-              className="py-4 px-3 text-gray-600 hover:text-orange-500 hover:border-b-2 hover:border-orange-500 transition-all"
+              href="/course"
+              className={`text-white hover:text-orange-100 px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/course') ? 'bg-orange-600' : ''
+              }`}
             >
-              {item.title}
+              Cours
             </Link>
-          ))}
+            <Link
+              href="/exercises"
+              className={`text-white hover:text-orange-100 px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/exercises') ? 'bg-orange-600' : ''
+              }`}
+            >
+              Exercices
+            </Link>
+            <Link
+              href="/resources"
+              className={`text-white hover:text-orange-100 px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/resources') ? 'bg-orange-600' : ''
+              }`}
+            >
+              Ressources
+            </Link>
+            <Link
+              href="/blog"
+              className={`text-white hover:text-orange-100 px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/blog') ? 'bg-orange-600' : ''
+              }`}
+            >
+              Blog
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
