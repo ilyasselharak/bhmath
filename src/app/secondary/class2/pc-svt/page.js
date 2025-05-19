@@ -1,0 +1,35 @@
+import ClassTemplate from '@/components/ClassTemplate';
+
+export const metadata = {
+  title: '1ère Bac PC-SVT | BHMath',
+  description: 'Ressources mathématiques pour la 1ère Bac Sciences Physiques et Sciences de la Vie et de la Terre',
+};
+
+const sections = [
+  {
+    title: 'Cours',
+    href: '/course/firstBac',
+    action: 'Voir les cours'
+  },
+  {
+    title: 'Exercices',
+    description: 'Exercices et problèmes pratiques',
+    href: '/secondary/class2/exercices',
+    action: 'Pratiquer'
+  },
+  {
+    title: 'Devoirs',
+    href: '/devoire/firstBac',
+    action: 'S\'entraîner'
+  }
+];
+
+export default function FirstBacPCSVT() {
+  return (
+    <ClassTemplate
+      title="1ère Bac - Sciences PC-SVT"
+      description="Cours, exercices et devoirs de mathématiques pour PC-SVT"
+      sections={sections}
+    />
+  );
+} 

@@ -6,16 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "init-2bacmath": "node -r esm src/scripts/init-2bacmath-courses.js"
   },
   "dependencies": {
-    "autoprefixer": "10.4.14",
-    "mongoose": "^7.4.2",
-    "next": "13.4.12",
-    "postcss": "8.4.27",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.10.1",
-    "tailwindcss": "3.3.3"
+    "autoprefixer": "^10.4.17",
+    "mongoose": "^8.1.1",
+    "next": "^15.0.0",
+    "postcss": "^8.4.35",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "tailwindcss": "^3.4.1"
   }
 }
