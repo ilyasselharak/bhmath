@@ -11,7 +11,11 @@ if (!MONGODB_URI) {
 let cached = global.mongoose;
 
 if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+  cached = global.mongoose = { 
+    conn: null, 
+    promise: null,
+    models: new Map()
+  };
 }
 
 export async function initMongoose() {
@@ -37,4 +41,19 @@ export async function initMongoose() {
   }
 
   return cached.conn;
+}
+
+// Utility function to get or create a model
+export function getModel(modelName, schema) {
+  if (!cached.models) {
+    cached.models = new Map();
+  }
+
+  if (cached.models.has(modelName)) {
+    return cached.models.get(modelName);
+  }
+
+  const model = mongoose.model(modelName, schema);
+  cached.models.set(modelName, model);
+  return model;
 }

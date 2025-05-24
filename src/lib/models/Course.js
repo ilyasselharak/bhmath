@@ -1,34 +1,26 @@
 import mongoose from 'mongoose';
 
-const CourseSchema = new mongoose.Schema({
+const courseSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-  },
-  level: {
-    type: String,
-    required: true,
-    enum: [
-      'firstCollege',
-      'secondCollege',
-      'thirdCollege',
-      'TroncCommum',
-      'firstBacMath',
-      'firstBac',
-      '2BacMath',
-      '2BacPCSVT'
-    ]
   },
   courseLink: {
     type: String,
     required: true,
   },
-  order: {
-    type: Number,
-    default: 0,
+  exerciseLink: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now,
   }
-}, {
-  timestamps: true,
 });
 
-export const Course = mongoose.models?.Course || mongoose.model('Course', CourseSchema); 
+export default courseSchema; 

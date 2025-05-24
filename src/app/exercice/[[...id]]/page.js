@@ -38,7 +38,7 @@ const levelTitles = {
   "2BacEco": "2ème Bac - Sciences Économiques",
 };
 
-async function getCourses(level) {
+async function getExercises(level) {
   await initMongoose();
 
   switch (level) {
@@ -84,35 +84,34 @@ async function getCourses(level) {
 export async function generateMetadata({ params }) {
   const level = params.id?.[0];
   return {
-    title: `${levelTitles[level] || "Cours"} | BHMaths`,
-    description: `Ressources et contenus pédagogiques pour ${
-      levelTitles[level] || "les mathématiques"
+    title: `Exercices - ${levelTitles[level] || "Mathématiques"} | BHMaths`,
+    description: `Exercices et problèmes de mathématiques pour ${
+      levelTitles[level] || "tous les niveaux"
     }`,
   };
 }
 
-export default async function CoursePage({ params }) {
+export default async function ExercisePage({ params }) {
   const level = params.id?.[0] || "";
-  const courseName = params.id?.[1];
+  const exerciseName = params.id?.[1];
   const viewMode = params.id?.[2]; // 'content' or undefined
- const courses = await getCourses(level);
- const filteredCourse = courseName
- ? courses.filter((item) => item.id === courseName)
- : [];
 
-  // If we're in content view mode and have a course, show the content
-  // console.log('ff',viewMode === 'content' && filteredCourse.length > 0)
-  if (viewMode === 'content' && filteredCourse.length > 0) {
-    
+  const exercises = await getExercises(level);
+  const filteredExercise = exerciseName
+    ? exercises.filter((item) => item.id === exerciseName)
+    : [];
+
+  // If we're in content view mode and have an exercise, show the content
+  if (viewMode === 'content' && filteredExercise.length > 0) {
     return (
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            {filteredCourse[0].name}
+            {filteredExercise[0].name}
           </h2>
           <div 
             className="prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: filteredCourse[0].courseLink }}
+            dangerouslySetInnerHTML={{ __html: filteredExercise[0].exerciseLink }}
           />
         </div>
       </div>
@@ -125,22 +124,22 @@ export default async function CoursePage({ params }) {
         <div className="bg-gradient-to-r from-[#003566] to-[#000814] text-white rounded-2xl py-16 mb-12 mx-4">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
-              {levelTitles[level] || "Cours"}
+              Exercices {levelTitles[level] || ""}
             </h1>
             <p className="text-lg md:text-xl opacity-90">
-              Tous les cours de mathématiques
+              Tous les exercices de mathématiques
             </p>
           </div>
         </div>
 
-        {filteredCourse.length > 0 ? (
+        {filteredExercise.length > 0 ? (
           <div className="max-w-5xl mx-auto px-4">
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                {filteredCourse[0].name}
+                {filteredExercise[0].name}
               </h2>
               <div className="space-y-8">
-                {filteredCourse[0].courseLink.split(",,").map((item, index) => (
+                {filteredExercise[0].exerciseLink.split(",,").map((item, index) => (
                   <div key={index} className="aspect-video w-full">
                     <iframe
                       src={item.trim()}
@@ -156,55 +155,33 @@ export default async function CoursePage({ params }) {
           <div className="max-w-6xl mx-auto px-4">
             <div className="bg-[#e3eaf4] rounded-xl p-6 mb-8 shadow-sm">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Liste des cours disponibles
+                Liste des exercices disponibles
               </h2>
               <p className="text-gray-600">
-                Sélectionnez un cours pour accéder à son contenu
+                Sélectionnez un exercice pour accéder à son contenu
               </p>
             </div>
 
-            {courses.length === 0 ? (
+            {exercises.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-600 text-lg">
-                  Aucun cours disponible pour le moment.
+                  Aucun exercice disponible pour le moment.
                 </p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {courses.map((course) => (
+                {exercises.map((exercise) => (
                   <div
-                    key={course._id}
+                    key={exercise._id}
                     className="bg-white rounded-xl p-6 shadow-lg border border-[#e3eaf4]"
                   >
                     <div className="space-y-4">
                       <h2 className="text-xl font-semibold text-gray-800">
-                        {course.name}
+                        {exercise.name}
                       </h2>
                       <div className="flex flex-col space-y-3">
                         <Link
-                          href={`/course/${level}/${course.id}/content`}
-                          className="flex items-center justify-between bg-gray-50 hover:bg-[#e3eaf4] rounded-lg p-4 transition-all duration-300"
-                        >
-                          <span className="text-gray-800 font-medium">
-                            Cours
-                          </span>
-                          <div className="text-[#003566]">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          </div>
-                        </Link>
-                        <Link
-                          href={`/exercice/${level}/${course.id}/content`}
+                          href={`/exercice/${level}/${exercise.id}/content`}
                           className="flex items-center justify-between bg-gray-50 hover:bg-[#e3eaf4] rounded-lg p-4 transition-all duration-300"
                         >
                           <span className="text-gray-800 font-medium">
@@ -257,4 +234,4 @@ export default async function CoursePage({ params }) {
       </main>
     </>
   );
-}
+} 
