@@ -64,17 +64,19 @@ export async function generateMetadata({ params }) {
   };
 }
 
-async function getDevoirs(level) {
+async function getDevoirs(level, semester) {
   await initMongoose();
   const Model = levelToModel[level];
   if (!Model) return null;
   
-  const devoirs = await Model.find({}).sort({ createdAt: -1 });
+  const query = semester ? { semester } : {};
+  const devoirs = await Model.find(query).sort({ createdAt: -1 });
   return JSON.parse(JSON.stringify(devoirs));
 }
 
-export default async function DevoirPage({ params }) {
+export default async function DevoirPage({ params, searchParams }) {
   const level = params?.id?.[0];
+  const semester = searchParams?.semester ? parseInt(searchParams.semester) : null;
   
   if (!level || !levelToModel[level]) {
     return (
@@ -87,11 +89,38 @@ export default async function DevoirPage({ params }) {
     );
   }
 
-  const devoirs = await getDevoirs(level);
+  const devoirs = await getDevoirs(level, semester);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Devoirs - {levelToName[level]}</h1>
+      
+      <div className="flex gap-4 mb-8">
+        <a
+          href={`/devoir/${level}`}
+          className={`px-4 py-2 rounded-lg ${
+            !semester ? 'bg-orange-500 text-white' : 'bg-gray-200 text-gray-700'
+          }`}
+        >
+          Tous
+        </a>
+        <a
+          href={`/devoir/${level}?semester=1`}
+          className={`px-4 py-2 rounded-lg ${
+            semester === 1 ? 'bg-orange-500 text-white' : 'bg-gray-200 text-gray-700'
+          }`}
+        >
+          1er Semestre
+        </a>
+        <a
+          href={`/devoir/${level}?semester=2`}
+          className={`px-4 py-2 rounded-lg ${
+            semester === 2 ? 'bg-orange-500 text-white' : 'bg-gray-200 text-gray-700'
+          }`}
+        >
+          2ème Semestre
+        </a>
+      </div>
       
       {devoirs && devoirs.length > 0 ? (
         <div className="grid gap-6">
@@ -100,7 +129,8 @@ export default async function DevoirPage({ params }) {
               <h2 className="text-xl font-semibold mb-2">{devoir.title}</h2>
               <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: devoir.content }} />
               <div className="mt-4 text-sm text-gray-500">
-                Publié le {new Date(devoir.createdAt).toLocaleDateString()}
+                <span className="mr-4">Semestre {devoir.semester}</span>
+                <span>Publié le {new Date(devoir.createdAt).toLocaleDateString()}</span>
               </div>
             </div>
           ))}
