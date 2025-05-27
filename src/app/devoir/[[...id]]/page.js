@@ -1,0 +1,115 @@
+import { initMongoose } from '@/lib/mongoose';
+
+// Import all devoir models
+import CommonCoreLettersDevoir from '@/models/CommonCoreLettersDevoir';
+import CommonCoreScienceDevoir from '@/models/CommonCoreScienceDevoir';
+import CommonCoreTechnicalDevoir from '@/models/CommonCoreTechnicalDevoir';
+import FirstBacMathDevoir from '@/models/FirstBacMathDevoir';
+import FirstBacLettersDevoir from '@/models/FirstBacLettersDevoir';
+import FirstBacEconomicsDevoir from '@/models/FirstBacEconomicsDevoir';
+import FirstBacScienceDevoir from '@/models/FirstBacScienceDevoir';
+import SecondBacMathADevoir from '@/models/SecondBacMathADevoir';
+import SecondBacMathBDevoir from '@/models/SecondBacMathBDevoir';
+import SecondBacLettersDevoir from '@/models/SecondBacLettersDevoir';
+import SecondBacEconomicsDevoir from '@/models/SecondBacEconomicsDevoir';
+import SecondBacPhysicsChemistryLifeSciencesDevoir from '@/models/SecondBacPhysicsChemistryLifeSciencesDevoir';
+import SecondBacTechnicalCommonDevoir from '@/models/SecondBacTechnicalCommonDevoir';
+
+// Map level identifiers to their corresponding models
+const levelToModel = {
+  'TroncCommunLettres': CommonCoreLettersDevoir,
+  'TroncCommunSc': CommonCoreScienceDevoir,
+  'TroncCommunTech': CommonCoreTechnicalDevoir,
+  'firstBacMath': FirstBacMathDevoir,
+  'firstBacLettres': FirstBacLettersDevoir,
+  'firstBacEco': FirstBacEconomicsDevoir,
+  'firstBacSc': FirstBacScienceDevoir,
+  '2BacMathA': SecondBacMathADevoir,
+  '2BacMathB': SecondBacMathBDevoir,
+  '2BacLettres': SecondBacLettersDevoir,
+  '2BacEco': SecondBacEconomicsDevoir,
+  '2BacPcSvt': SecondBacPhysicsChemistryLifeSciencesDevoir,
+  '2BacTech': SecondBacTechnicalCommonDevoir
+};
+
+// Map level identifiers to their display names
+const levelToName = {
+  'TroncCommunLettres': 'Tronc Commun - Lettres',
+  'TroncCommunSc': 'Tronc Commun - Sciences',
+  'TroncCommunTech': 'Tronc Commun - Technique',
+  'firstBacMath': 'Première année Bac - Mathématiques',
+  'firstBacLettres': 'Première année Bac - Lettres',
+  'firstBacEco': 'Première année Bac - Économie',
+  'firstBacSc': 'Première année Bac - Sciences',
+  '2BacMathA': '2ème année Bac - Mathématiques A',
+  '2BacMathB': '2ème année Bac - Mathématiques B',
+  '2BacLettres': '2ème année Bac - Lettres',
+  '2BacEco': '2ème année Bac - Économie',
+  '2BacPcSvt': '2ème année Bac - Sciences Physiques et SVT',
+  '2BacTech': '2ème année Bac - Technique'
+};
+
+export async function generateMetadata({ params }) {
+  const level = params?.id?.[0];
+  if (!level || !levelToName[level]) {
+    return {
+      title: 'Devoirs | BHMath',
+      description: 'Devoirs de mathématiques'
+    };
+  }
+
+  return {
+    title: `Devoirs - ${levelToName[level]} | BHMath`,
+    description: `Devoirs de mathématiques pour ${levelToName[level]}`
+  };
+}
+
+async function getDevoirs(level) {
+  await initMongoose();
+  const Model = levelToModel[level];
+  if (!Model) return null;
+  
+  const devoirs = await Model.find({}).sort({ createdAt: -1 });
+  return JSON.parse(JSON.stringify(devoirs));
+}
+
+export default async function DevoirPage({ params }) {
+  const level = params?.id?.[0];
+  
+  if (!level || !levelToModel[level]) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center py-12">
+          <h1 className="text-2xl font-bold mb-4">Niveau non trouvé</h1>
+          <p className="text-gray-500">Le niveau demandé n'existe pas.</p>
+        </div>
+      </div>
+    );
+  }
+
+  const devoirs = await getDevoirs(level);
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8">Devoirs - {levelToName[level]}</h1>
+      
+      {devoirs && devoirs.length > 0 ? (
+        <div className="grid gap-6">
+          {devoirs.map((devoir) => (
+            <div key={devoir._id} className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-2">{devoir.title}</h2>
+              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: devoir.content }} />
+              <div className="mt-4 text-sm text-gray-500">
+                Publié le {new Date(devoir.createdAt).toLocaleDateString()}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-12">
+          <p className="text-gray-500">Aucun devoir disponible pour le moment.</p>
+        </div>
+      )}
+    </div>
+  );
+} 

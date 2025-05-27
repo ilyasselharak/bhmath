@@ -8,18 +8,18 @@ export const metadata = {
 const sections = [
   {
     title: 'Cours',
-    href: '/course/TroncCommum',
+    href: '/course/TroncCommunSc',
     action: 'Voir les cours'
   },
   {
     title: 'Exercices',
     description: 'Exercices et problèmes pratiques',
-    href: '/secondary/class1/exercices',
+    href: '/exercice/TroncCommunSc',
     action: 'Pratiquer'
   },
   {
     title: 'Devoirs',
-    href: '/devoire/TroncCommum',
+    href: '/devoir/TroncCommunSc',
     action: 'S\'entraîner'
   }
 ];

@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: 'Devoirs',
-    href: '/devoire/firstCollege',
+    href: '/devoir/firstCollege',
     action: 'S\'entraîner'
   }
 ];

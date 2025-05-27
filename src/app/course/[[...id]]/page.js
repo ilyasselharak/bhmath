@@ -203,7 +203,7 @@ export default async function CoursePage({ params }) {
                             </svg>
                           </div>
                         </Link>
-                        <Link
+                        {/* <Link
                           href={`/exercice/${level}/${course.id}/content`}
                           className="flex items-center justify-between bg-gray-50 hover:bg-[#e3eaf4] rounded-lg p-4 transition-all duration-300"
                         >
@@ -224,7 +224,7 @@ export default async function CoursePage({ params }) {
                               />
                             </svg>
                           </div>
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </div>

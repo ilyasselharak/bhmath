@@ -1,70 +1,45 @@
-import Link from 'next/link';
+import ClassTemplate from '@/components/ClassTemplate';
 
 export const metadata = {
-  title: '3ème Année Collège | BHMath',
-  description: 'Ressources mathématiques pour la 3ème année du collège',
+  title: '3ème année collège | BHMath',
+  description: 'Ressources mathématiques pour la troisième année du collège',
 };
 
-const resources = [
+const sections = [
   {
     title: 'Cours',
-    description: 'Accédez à tous les cours de mathématiques',
     href: '/course/thirdCollege',
+    action: 'Voir les cours'
   },
   {
     title: 'Exercices',
+    description: 'Exercices et problèmes pratiques',
     href: '/college/class3/exercices',
-    description: 'Exercices d\'application et de pratique'
+    action: 'Pratiquer'
   },
   {
     title: 'Devoirs',
-    href: '/college/class3/devoirs',
-    description: 'Devoirs et examens corrigés'
+    href: '/devoir/thirdCollege',
+    action: 'S\'entraîner'
   },
   {
     title: 'Résumés',
-    href: '/college/class3/resumes',
-    description: 'Fiches de révision et résumés'
+    href: '/course/thirdCollege/summaries',
+    action: 'Réviser'
+  },
+  {
+    title: 'Contrôles',
+    href: '/exams/thirdCollege',
+    action: 'Se tester'
   }
 ];
 
-export default function ThirdYearCollegePage() {
+export default function ThirdYearCollege() {
   return (
-    <main className="py-12">
-      <div className="bg-gradient-to-r from-orange-200 to-orange-400 text-black rounded-2xl py-16 mb-12 mx-4">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">
-            3ème Année Collège
-          </h1>
-          <p className="text-lg md:text-xl opacity-90">
-            Sélectionnez une ressource pour commencer
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {resources.map((resource, index) => (
-            <Link 
-              key={index}
-              href={resource.href}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div className="text-center">
-                <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                  {resource.title}
-                </h2>
-                <p className="text-gray-600 mb-4">
-                  {resource.description}
-                </p>
-                <div className="inline-block bg-orange-500 text-white text-sm px-4 py-2 rounded-full">
-                  Accéder aux {resource.title.toLowerCase()}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </main>
+    <ClassTemplate
+      title="3ème année collège"
+      description="Cours, exercices et devoirs de mathématiques"
+      sections={sections}
+    />
   );
 } 

@@ -1,8 +1,8 @@
 import ClassTemplate from '@/components/ClassTemplate';
 
 export const metadata = {
-  title: '1ère Bac Sciences Math | BHMath',
-  description: 'Ressources mathématiques pour la 1ère Bac Sciences Mathématiques',
+  title: 'Première année Bac - Sciences Mathématiques | BHMath',
+  description: 'Ressources mathématiques pour la première année du Baccalauréat - Sciences Mathématiques',
 };
 
 const sections = [
@@ -14,12 +14,12 @@ const sections = [
   {
     title: 'Exercices',
     description: 'Exercices et problèmes pratiques',
-    href: '/secondary/class2/exercices',
+    href: '/exercice/firstBacMath',
     action: 'Pratiquer'
   },
   {
     title: 'Devoirs',
-    href: '/devoire/firstBacMath',
+    href: '/devoir/firstBacMath',
     action: 'S\'entraîner'
   },
   {
@@ -29,11 +29,11 @@ const sections = [
   }
 ];
 
-export default function FirstBacSciencesMath() {
+export default function FirstBacMath() {
   return (
     <ClassTemplate
-      title="1ère Bac - Sciences Mathématiques"
-      description="Cours, exercices et devoirs de mathématiques pour Sciences Math"
+      title="Première année Bac - Sciences Mathématiques"
+      description="Cours, exercices et devoirs de mathématiques"
       sections={sections}
     />
   );

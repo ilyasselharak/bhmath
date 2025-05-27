@@ -1,25 +1,25 @@
 import ClassTemplate from '@/components/ClassTemplate';
 
 export const metadata = {
-  title: '2ème Bac Math A | BHMath',
-  description: 'Ressources mathématiques pour la 2ème Bac Sciences Mathématiques A',
+  title: '2ème année Bac - Mathématiques A | BHMath',
+  description: 'Ressources mathématiques pour la 2ème année du Baccalauréat - Mathématiques A',
 };
 
 const sections = [
   {
     title: 'Cours',
-    href: '/course/2BacMath',
+    href: '/course/2BacMathA',
     action: 'Voir les cours'
   },
   {
     title: 'Exercices',
     description: 'Exercices et problèmes pratiques',
-    href: '/secondary/class3/exercices',
+    href: '/exercice/2BacMathA',
     action: 'Pratiquer'
   },
   {
     title: 'Devoirs',
-    href: '/devoire/2BacMath',
+    href: '/devoir/2BacMathA',
     action: 'S\'entraîner'
   },
   {
@@ -37,8 +37,8 @@ const sections = [
 export default function SecondBacMathA() {
   return (
     <ClassTemplate
-      title="2ème Bac - Sciences Mathématiques A"
-      description="Cours, exercices et préparation aux examens nationaux"
+      title="2ème année Bac - Mathématiques A"
+      description="Cours, exercices et devoirs de mathématiques"
       sections={sections}
     />
   );

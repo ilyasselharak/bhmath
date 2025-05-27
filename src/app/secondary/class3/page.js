@@ -1,80 +1,49 @@
-import Link from 'next/link';
+import ClassTemplate from '@/components/ClassTemplate';
 
 export const metadata = {
-  title: 'Terminal Bac | BHMath',
-  description: 'Ressources mathématiques pour la Terminal du Baccalauréat',
+  title: '2ème année du Baccalauréat | BHMath',
+  description: 'Ressources mathématiques pour la 2ème année du Baccalauréat',
 };
 
-const specializations = [
+const sections = [
   {
-    title: 'Sciences Mathématiques A',
+    title: 'Mathématiques A',
+    description: 'Cours et exercices pour la filière Mathématiques A',
     href: '/secondary/class3/math-a',
-    description: 'Mathématiques approfondies avec orientation scientifique'
+    action: 'Accéder'
   },
   {
-    title: 'Sciences Mathématiques B',
+    title: 'Mathématiques B',
+    description: 'Cours et exercices pour la filière Mathématiques B',
     href: '/secondary/class3/math-b',
-    description: 'Mathématiques approfondies avec orientation technique'
+    action: 'Accéder'
   },
   {
-    title: 'Sciences Physiques',
+    title: 'Sciences Physiques et SVT',
+    description: 'Cours et exercices pour la filière Sciences Physiques et SVT',
     href: '/secondary/class3/pc-svt',
-    description: 'Sciences Physiques et Sciences de la Vie et de la Terre'
-  },
-  {
-    title: 'Sciences Économiques',
-    href: '/secondary/class3/eco',
-    description: 'Mathématiques appliquées à l\'économie et gestion'
+    action: 'Accéder'
   },
   {
     title: 'Lettres',
+    description: 'Cours et exercices pour la filière Lettres',
     href: '/secondary/class3/lettres',
-    description: 'Programme adapté aux filières littéraires'
+    action: 'Accéder'
   },
   {
-    title: 'Sciences Techniques',
-    href: '/secondary/class3/technique',
-    description: 'Programme pour les filières techniques'
+    title: 'Économie',
+    description: 'Cours et exercices pour la filière Économie',
+    href: '/secondary/class3/ECO',
+    action: 'Accéder'
   }
 ];
 
-export default function TerminalBacPage() {
+export default function SecondBac() {
   return (
-    <main className="py-12">
-      <div className="bg-gradient-to-r from-orange-200 to-orange-400 text-black rounded-2xl py-16 mb-12 mx-4">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">
-            Terminal Baccalauréat
-          </h1>
-          <p className="text-lg md:text-xl opacity-90">
-            Choisissez votre spécialisation
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specializations.map((spec, index) => (
-            <Link 
-              key={index}
-              href={spec.href}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div className="text-center">
-                <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                  {spec.title}
-                </h2>
-                <p className="text-gray-600 mb-4">
-                  {spec.description}
-                </p>
-                <div className="inline-block bg-orange-500 text-white text-sm px-4 py-2 rounded-full">
-                  Accéder au programme
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </main>
+    <ClassTemplate
+      title="2ème année du Baccalauréat"
+      description="Choisissez votre filière pour accéder aux ressources"
+      sections={sections}
+    />
   );
 } 
