@@ -48,13 +48,13 @@ async function getCourses(level) {
       return await SecondCollegeCourse.find().sort({ createdAt: -1 });
     case "thirdCollege":
       return await ThirdCollegeCourse.find().sort({ createdAt: -1 });
-    case "TroncCommumSc":
+    case "TroncCommunSc":
       return await CommonCoreScienceCourse.find().sort({ createdAt: -1 });
-    case "TroncCommumTech":
+    case "TroncCommunTech":
       return await CommonCoreTechnicalCourse.find().sort({ createdAt: -1 });
-    case "TroncCommum":
+    case "TroncCommun":
       return await CommonCoreScienceCourse.find().sort({ createdAt: -1 });
-    case "TroncCommumLettre":
+    case "TroncCommunLettres":
       return await CommonCoreLettersCourse.find().sort({ createdAt: -1 });
     case "firstBacMath":
       return await FirstBacMathCourse.find().sort({ createdAt: -1 });

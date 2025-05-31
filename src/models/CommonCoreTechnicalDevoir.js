@@ -8,4 +8,4 @@ const CommonCoreTechnicalDevoirSchema = new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now }
 });
 
-export default mongoose.models.CommonCoreTechnicalDevoir || mongoose.model('CommonCoreTechnicalDevoir', CommonCoreTechnicalDevoirSchema); 
+export default mongoose.models.CommonCoreTechnicalDevoir || mongoose.model('CommonCoreTechnicalDevoir', CommonCoreTechnicalDevoirSchema);

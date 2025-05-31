@@ -73,6 +73,7 @@ export async function GET(request) {
     }
 
     const courses = await getCourses(level);
+    console.log(courses,level);
     return NextResponse.json(courses);
   } catch (error) {
     console.error('Database Error:', error);
