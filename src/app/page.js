@@ -87,7 +87,7 @@ export default function HomePage() {
                   <h3 className="text-lg font-semibold text-gray-800">2ème année</h3>
                 </Link>
                 <Link 
-                  href="/course/thirdCollege"
+                  href="/college/class3"
                   className="block p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-gray-800">3ème année</h3>
