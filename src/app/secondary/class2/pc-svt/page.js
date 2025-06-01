@@ -8,13 +8,13 @@ export const metadata = {
 const sections = [
   {
     title: 'Cours',
-    href: '/course/firstBac',
+    href: '/course/firstBacScience',
     action: 'Voir les cours'
   },
   {
     title: 'Exercices',
     description: 'Exercices et problèmes pratiques',
-    href: '/secondary/class2/exercices',
+    href: '/exercice/firstBacScience',
     action: 'Pratiquer'
   },
   {

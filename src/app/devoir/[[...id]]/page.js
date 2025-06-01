@@ -14,6 +14,9 @@ import SecondBacLettersDevoir from '@/models/SecondBacLettersDevoir';
 import SecondBacEconomicsDevoir from '@/models/SecondBacEconomicsDevoir';
 import SecondBacPhysicsChemistryLifeSciencesDevoir from '@/models/SecondBacPhysicsChemistryLifeSciencesDevoir';
 import SecondBacTechnicalCommonDevoir from '@/models/SecondBacTechnicalCommonDevoir';
+import FirstCollegeDevoir from '@/models/FirstCollegeDevoir';
+import SecondCollegeDevoir from '@/models/SecondCollegeDevoir';
+import ThirdCollegeDevoir from '@/models/ThirdCollegeDevoir';
 
 // Map level identifiers to their corresponding models
 const levelToModel = {
@@ -29,7 +32,10 @@ const levelToModel = {
   '2BacLettres': SecondBacLettersDevoir,
   '2BacEco': SecondBacEconomicsDevoir,
   '2BacPcSvt': SecondBacPhysicsChemistryLifeSciencesDevoir,
-  '2BacTech': SecondBacTechnicalCommonDevoir
+  '2BacTech': SecondBacTechnicalCommonDevoir,
+  'firstCollege': FirstCollegeDevoir,
+  'secondCollege': SecondCollegeDevoir,
+  'thirdCollege': ThirdCollegeDevoir
 };
 
 // Map level identifiers to their display names
@@ -46,7 +52,10 @@ const levelToName = {
   '2BacLettres': '2ème année Bac - Lettres',
   '2BacEco': '2ème année Bac - Économie',
   '2BacPcSvt': '2ème année Bac - Sciences Physiques et SVT',
-  '2BacTech': '2ème année Bac - Technique'
+  '2BacTech': '2ème année Bac - Technique',
+  'firstCollege': '1ère année Collège',
+  'secondCollege': '2ème année Collège',
+  'thirdCollege': '3ème année Collège'
 };
 
 export async function generateMetadata({ params }) {

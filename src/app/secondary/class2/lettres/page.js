@@ -8,18 +8,18 @@ export const metadata = {
 const sections = [
   {
     title: 'Cours',
-    href: '/course/firstBac',
+    href: '/course/firstBacLetters',
     action: 'Voir les cours'
   },
   {
     title: 'Exercices',
     description: 'Exercices et problèmes pratiques',
-    href: '/secondary/class2/exercices',
+    href: '/exercice/firstBacLetters',
     action: 'Pratiquer'
   },
   {
     title: 'Devoirs',
-    href: '/devoire/firstBac',
+    href: '/devoire/firstBacLetters',
     action: 'S\'entraîner'
   },
   {

@@ -9,16 +9,16 @@ const resources = [
   {
     title: 'Cours',
     description: 'Accédez à tous les cours de mathématiques',
-    href: '/course/firstBac',
+    href: '/course/firstBacEconomics',
   },
   {
     title: 'Exercices',
-    href: '/secondary/class2/economie/exercices',
+    href: '/exercice/firstBacEconomics',
     description: 'Exercices d\'application et de pratique'
   },
   {
     title: 'Devoirs',
-    href: '/secondary/class2/economie/devoirs',
+    href: '/devoire/firstBacEconomics',
     description: 'Devoirs et examens corrigés'
   },
   {
