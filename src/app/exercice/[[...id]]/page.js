@@ -22,10 +22,10 @@ const levelTitles = {
   firstCollege: "1ère année collège",
   secondCollege: "2ème année collège",
   thirdCollege: "3ème année collège",
-  TroncCommumSc: "Tronc commun - Sciences",
-  TroncCommumTech: "Tronc commun - Technique",
-  TroncCommum: "Tronc commun",
-  TroncCommumLettre: "Tronc commun - Lettres",
+  TroncCommunSc: "Tronc commun - Sciences",
+  TroncCommunTech: "Tronc commun - Technique",
+  TroncCommun: "Tronc commun",
+  TroncCommunLettre: "Tronc commun - Lettres",
   firstBacMath: "1ère Bac - Mathématiques",
   firstBacScience: "1ère Bac - Sciences",
   firstBacEconomics: "1ère Bac - Sciences Économiques",
@@ -48,13 +48,13 @@ async function getExercises(level) {
       return await SecondCollegeCourse.find().sort({ createdAt: -1 });
     case "thirdCollege":
       return await ThirdCollegeCourse.find().sort({ createdAt: -1 });
-    case "TroncCommumSc":
+    case "TroncCommunSc":
       return await CommonCoreScienceCourse.find().sort({ createdAt: -1 });
-    case "TroncCommumTech":
+    case "TroncCommunTech":
       return await CommonCoreTechnicalCourse.find().sort({ createdAt: -1 });
-    case "TroncCommum":
+    case "TroncCommun":
       return await CommonCoreScienceCourse.find().sort({ createdAt: -1 });
-    case "TroncCommumLettre":
+    case "TroncCommunLettre":
       return await CommonCoreLettersCourse.find().sort({ createdAt: -1 });
     case "firstBacMath":
       return await FirstBacMathCourse.find().sort({ createdAt: -1 });
