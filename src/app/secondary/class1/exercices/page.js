@@ -9,35 +9,35 @@ const categories = [
   {
     title: 'Analyse',
     topics: [
-      { title: 'Fonctions numériques', href: '/secondary/class1/exercices/fonctions-numeriques' },
-      { title: 'Limites et continuité', href: '/secondary/class1/exercices/limites-continuite' },
-      { title: 'Dérivation', href: '/secondary/class1/exercices/derivation' },
-      { title: 'Étude de fonctions', href: '/secondary/class1/exercices/etude-fonctions' }
+      { title: 'Fonctions numériques', href: '/secondary/class1/exercice/fonctions-numeriques' },
+      { title: 'Limites et continuité', href: '/secondary/class1/exercice/limites-continuite' },
+      { title: 'Dérivation', href: '/secondary/class1/exercice/derivation' },
+      { title: 'Étude de fonctions', href: '/secondary/class1/exercice/etude-fonctions' }
     ]
   },
   {
     title: 'Géométrie',
     topics: [
-      { title: 'Vecteurs du plan', href: '/secondary/class1/exercices/vecteurs-plan' },
-      { title: 'Produit scalaire', href: '/secondary/class1/exercices/produit-scalaire' },
-      { title: 'Trigonométrie', href: '/secondary/class1/exercices/trigonometrie' },
-      { title: 'Configurations géométriques', href: '/secondary/class1/exercices/configurations' }
+      { title: 'Vecteurs du plan', href: '/secondary/class1/exercice/vecteurs-plan' },
+      { title: 'Produit scalaire', href: '/secondary/class1/exercice/produit-scalaire' },
+      { title: 'Trigonométrie', href: '/secondary/class1/exercice/trigonometrie' },
+      { title: 'Configurations géométriques', href: '/secondary/class1/exercice/configurations' }
     ]
   },
   {
     title: 'Statistiques et Probabilités',
     topics: [
-      { title: 'Statistiques descriptives', href: '/secondary/class1/exercices/statistiques' },
-      { title: 'Probabilités conditionnelles', href: '/secondary/class1/exercices/probabilites' },
-      { title: 'Variables aléatoires', href: '/secondary/class1/exercices/variables-aleatoires' }
+      { title: 'Statistiques descriptives', href: '/secondary/class1/exercice/statistiques' },
+      { title: 'Probabilités conditionnelles', href: '/secondary/class1/exercice/probabilites' },
+      { title: 'Variables aléatoires', href: '/secondary/class1/exercice/variables-aleatoires' }
     ]
   },
   {
     title: 'Suites Numériques',
     topics: [
-      { title: 'Suites arithmétiques', href: '/secondary/class1/exercices/suites-arithmetiques' },
-      { title: 'Suites géométriques', href: '/secondary/class1/exercices/suites-geometriques' },
-      { title: 'Limites de suites', href: '/secondary/class1/exercices/limites-suites' }
+      { title: 'Suites arithmétiques', href: '/secondary/class1/exercice/suites-arithmetiques' },
+      { title: 'Suites géométriques', href: '/secondary/class1/exercice/suites-geometriques' },
+      { title: 'Limites de suites', href: '/secondary/class1/exercice/limites-suites' }
     ]
   }
 ];

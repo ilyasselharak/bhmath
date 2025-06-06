@@ -9,35 +9,35 @@ const categories = [
   {
     title: 'Nombres et Calculs',
     topics: [
-      { title: 'Nombres rationnels', href: '/college/class3/exercices/nombres-rationnels' },
-      { title: 'Puissances et racines', href: '/college/class3/exercices/puissances-racines' },
-      { title: 'Calcul littéral avancé', href: '/college/class3/exercices/calcul-litteral' },
-      { title: 'Identités remarquables', href: '/college/class3/exercices/identites-remarquables' }
+      { title: 'Nombres rationnels', href: '/college/class3/exercice/nombres-rationnels' },
+      { title: 'Puissances et racines', href: '/college/class3/exercice/puissances-racines' },
+      { title: 'Calcul littéral avancé', href: '/college/class3/exercice/calcul-litteral' },
+      { title: 'Identités remarquables', href: '/college/class3/exercice/identites-remarquables' }
     ]
   },
   {
     title: 'Géométrie',
     topics: [
-      { title: 'Théorème de Pythagore', href: '/college/class3/exercices/pythagore' },
-      { title: 'Théorème de Thalès', href: '/college/class3/exercices/thales' },
-      { title: 'Trigonométrie', href: '/college/class3/exercices/trigonometrie' },
-      { title: 'Vecteurs', href: '/college/class3/exercices/vecteurs' }
+      { title: 'Théorème de Pythagore', href: '/college/class3/exercice/pythagore' },
+      { title: 'Théorème de Thalès', href: '/college/class3/exercice/thales' },
+      { title: 'Trigonométrie', href: '/college/class3/exercice/trigonometrie' },
+      { title: 'Vecteurs', href: '/college/class3/exercice/vecteurs' }
     ]
   },
   {
     title: 'Fonctions',
     topics: [
-      { title: 'Fonctions linéaires', href: '/college/class3/exercices/fonctions-lineaires' },
-      { title: 'Fonctions affines', href: '/college/class3/exercices/fonctions-affines' },
-      { title: 'Représentation graphique', href: '/college/class3/exercices/graphiques' }
+      { title: 'Fonctions linéaires', href: '/college/class3/exercice/fonctions-lineaires' },
+      { title: 'Fonctions affines', href: '/college/class3/exercice/fonctions-affines' },
+      { title: 'Représentation graphique', href: '/college/class3/exercice/graphiques' }
     ]
   },
   {
     title: 'Statistiques et Probabilités',
     topics: [
-      { title: 'Statistiques', href: '/college/class3/exercices/statistiques' },
-      { title: 'Probabilités', href: '/college/class3/exercices/probabilites' },
-      { title: 'Échantillonnage', href: '/college/class3/exercices/echantillonnage' }
+      { title: 'Statistiques', href: '/college/class3/exercice/statistiques' },
+      { title: 'Probabilités', href: '/college/class3/exercice/probabilites' },
+      { title: 'Échantillonnage', href: '/college/class3/exercice/echantillonnage' }
     ]
   }
 ];

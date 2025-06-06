@@ -14,7 +14,7 @@ const sections = [
   {
     title: 'Exercices',
     description: 'Exercices et problèmes pratiques',
-    href: '/secondary/class3/exercices',
+    href: '/secondary/class3/exercice',
     action: 'Pratiquer'
   },
   {

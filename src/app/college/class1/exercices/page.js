@@ -9,33 +9,33 @@ const categories = [
   {
     title: 'Nombres et Opérations',
     topics: [
-      { title: 'Nombres entiers', href: '/college/class1/exercices/nombres-entiers' },
-      { title: 'Nombres décimaux', href: '/college/class1/exercices/nombres-decimaux' },
-      { title: 'Fractions', href: '/college/class1/exercices/fractions' },
-      { title: 'Opérations', href: '/college/class1/exercices/operations' }
+      { title: 'Nombres entiers', href: '/college/class1/exercice/nombres-entiers' },
+      { title: 'Nombres décimaux', href: '/college/class1/exercice/nombres-decimaux' },
+      { title: 'Fractions', href: '/college/class1/exercice/fractions' },
+      { title: 'Opérations', href: '/college/class1/exercice/operations' }
     ]
   },
   {
     title: 'Géométrie',
     topics: [
-      { title: 'Figures géométriques', href: '/college/class1/exercices/figures-geometriques' },
-      { title: 'Angles', href: '/college/class1/exercices/angles' },
-      { title: 'Périmètres et Aires', href: '/college/class1/exercices/perimetres-aires' }
+      { title: 'Figures géométriques', href: '/college/class1/exercice/figures-geometriques' },
+      { title: 'Angles', href: '/college/class1/exercice/angles' },
+      { title: 'Périmètres et Aires', href: '/college/class1/exercice/perimetres-aires' }
     ]
   },
   {
     title: 'Grandeurs et Mesures',
     topics: [
-      { title: 'Longueurs', href: '/college/class1/exercices/longueurs' },
-      { title: 'Masses', href: '/college/class1/exercices/masses' },
-      { title: 'Durées', href: '/college/class1/exercices/durees' }
+      { title: 'Longueurs', href: '/college/class1/exercice/longueurs' },
+      { title: 'Masses', href: '/college/class1/exercice/masses' },
+      { title: 'Durées', href: '/college/class1/exercice/durees' }
     ]
   },
   {
     title: 'Problèmes',
     topics: [
-      { title: 'Problèmes simples', href: '/college/class1/exercices/problemes-simples' },
-      { title: 'Problèmes complexes', href: '/college/class1/exercices/problemes-complexes' }
+      { title: 'Problèmes simples', href: '/college/class1/exercice/problemes-simples' },
+      { title: 'Problèmes complexes', href: '/college/class1/exercice/problemes-complexes' }
     ]
   }
 ];

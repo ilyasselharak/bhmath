@@ -13,7 +13,7 @@ const resources = [
   },
   {
     title: 'Exercices',
-    href: '/secondary/class3/sciences-eco/exercices',
+    href: '/secondary/class3/sciences-eco/exercice',
     description: 'Exercices d\'application et de pratique'
   },
   {

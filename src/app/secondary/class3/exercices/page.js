@@ -9,36 +9,36 @@ const categories = [
   {
     title: 'Analyse',
     topics: [
-      { title: 'Fonctions exponentielles', href: '/secondary/class3/exercices/fonctions-exponentielles' },
-      { title: 'Fonctions logarithmes', href: '/secondary/class3/exercices/fonctions-logarithmes' },
-      { title: 'Primitives et intégrales', href: '/secondary/class3/exercices/primitives-integrales' },
-      { title: 'Équations différentielles', href: '/secondary/class3/exercices/equations-differentielles' }
+      { title: 'Fonctions exponentielles', href: '/secondary/class3/exercice/fonctions-exponentielles' },
+      { title: 'Fonctions logarithmes', href: '/secondary/class3/exercice/fonctions-logarithmes' },
+      { title: 'Primitives et intégrales', href: '/secondary/class3/exercice/primitives-integrales' },
+      { title: 'Équations différentielles', href: '/secondary/class3/exercice/equations-differentielles' }
     ]
   },
   {
     title: 'Géométrie dans l\'espace',
     topics: [
-      { title: 'Vecteurs de l\'espace', href: '/secondary/class3/exercices/vecteurs-espace' },
-      { title: 'Produit scalaire', href: '/secondary/class3/exercices/produit-scalaire' },
-      { title: 'Produit vectoriel', href: '/secondary/class3/exercices/produit-vectoriel' },
-      { title: 'Droites et plans', href: '/secondary/class3/exercices/droites-plans' }
+      { title: 'Vecteurs de l\'espace', href: '/secondary/class3/exercice/vecteurs-espace' },
+      { title: 'Produit scalaire', href: '/secondary/class3/exercice/produit-scalaire' },
+      { title: 'Produit vectoriel', href: '/secondary/class3/exercice/produit-vectoriel' },
+      { title: 'Droites et plans', href: '/secondary/class3/exercice/droites-plans' }
     ]
   },
   {
     title: 'Nombres complexes',
     topics: [
-      { title: 'Forme algébrique', href: '/secondary/class3/exercices/complexes-algebrique' },
-      { title: 'Forme trigonométrique', href: '/secondary/class3/exercices/complexes-trigonometrique' },
-      { title: 'Équations dans C', href: '/secondary/class3/exercices/equations-complexes' }
+      { title: 'Forme algébrique', href: '/secondary/class3/exercice/complexes-algebrique' },
+      { title: 'Forme trigonométrique', href: '/secondary/class3/exercice/complexes-trigonometrique' },
+      { title: 'Équations dans C', href: '/secondary/class3/exercice/equations-complexes' }
     ]
   },
   {
     title: 'Probabilités',
     topics: [
-      { title: 'Lois de probabilité', href: '/secondary/class3/exercices/lois-probabilite' },
-      { title: 'Loi binomiale', href: '/secondary/class3/exercices/loi-binomiale' },
-      { title: 'Loi normale', href: '/secondary/class3/exercices/loi-normale' },
-      { title: 'Échantillonnage', href: '/secondary/class3/exercices/echantillonnage' }
+      { title: 'Lois de probabilité', href: '/secondary/class3/exercice/lois-probabilite' },
+      { title: 'Loi binomiale', href: '/secondary/class3/exercice/loi-binomiale' },
+      { title: 'Loi normale', href: '/secondary/class3/exercice/loi-normale' },
+      { title: 'Échantillonnage', href: '/secondary/class3/exercice/echantillonnage' }
     ]
   }
 ];

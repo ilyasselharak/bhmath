@@ -9,35 +9,35 @@ const categories = [
   {
     title: 'Nombres et Opérations',
     topics: [
-      { title: 'Nombres relatifs', href: '/college/class2/exercices/nombres-relatifs' },
-      { title: 'Fractions et décimaux', href: '/college/class2/exercices/fractions-decimaux' },
-      { title: 'Puissances', href: '/college/class2/exercices/puissances' },
-      { title: 'Racines carrées', href: '/college/class2/exercices/racines-carrees' }
+      { title: 'Nombres relatifs', href: '/college/class2/exercice/nombres-relatifs' },
+      { title: 'Fractions et décimaux', href: '/college/class2/exercice/fractions-decimaux' },
+      { title: 'Puissances', href: '/college/class2/exercice/puissances' },
+      { title: 'Racines carrées', href: '/college/class2/exercice/racines-carrees' }
     ]
   },
   {
     title: 'Géométrie',
     topics: [
-      { title: 'Triangles', href: '/college/class2/exercices/triangles' },
-      { title: 'Parallélogrammes', href: '/college/class2/exercices/parallelogrammes' },
-      { title: 'Cercle et disque', href: '/college/class2/exercices/cercle-disque' },
-      { title: 'Symétries', href: '/college/class2/exercices/symetries' }
+      { title: 'Triangles', href: '/college/class2/exercice/triangles' },
+      { title: 'Parallélogrammes', href: '/college/class2/exercice/parallelogrammes' },
+      { title: 'Cercle et disque', href: '/college/class2/exercice/cercle-disque' },
+      { title: 'Symétries', href: '/college/class2/exercice/symetries' }
     ]
   },
   {
     title: 'Calcul littéral',
     topics: [
-      { title: 'Expressions littérales', href: '/college/class2/exercices/expressions-litterales' },
-      { title: 'Équations', href: '/college/class2/exercices/equations' },
-      { title: 'Inéquations', href: '/college/class2/exercices/inequations' }
+      { title: 'Expressions littérales', href: '/college/class2/exercice/expressions-litterales' },
+      { title: 'Équations', href: '/college/class2/exercice/equations' },
+      { title: 'Inéquations', href: '/college/class2/exercice/inequations' }
     ]
   },
   {
     title: 'Proportions',
     topics: [
-      { title: 'Proportionnalité', href: '/college/class2/exercices/proportionnalite' },
-      { title: 'Pourcentages', href: '/college/class2/exercices/pourcentages' },
-      { title: 'Vitesse moyenne', href: '/college/class2/exercices/vitesse-moyenne' }
+      { title: 'Proportionnalité', href: '/college/class2/exercice/proportionnalite' },
+      { title: 'Pourcentages', href: '/college/class2/exercice/pourcentages' },
+      { title: 'Vitesse moyenne', href: '/college/class2/exercice/vitesse-moyenne' }
     ]
   }
 ];

@@ -13,7 +13,7 @@ const resources = [
   },
   {
     title: 'Exercices',
-    href: '/secondary/class3/lettres/exercices',
+    href: '/secondary/class3/lettres/exercice',
     description: 'Exercices d\'application et de pratique'
   },
   {

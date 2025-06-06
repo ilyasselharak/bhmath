@@ -24,9 +24,9 @@ export default function NavHeader() {
               Cours
             </Link>
             <Link
-              href="/exercises"
+              href="/exercice"
               className={`text-white hover:text-orange-100 px-3 py-2 rounded-md text-sm font-medium ${
-                isActive('/exercises') ? 'bg-orange-600' : ''
+                isActive('/exercice') ? 'bg-orange-600' : ''
               }`}
             >
               Exercices

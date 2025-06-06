@@ -9,37 +9,37 @@ const categories = [
   {
     title: 'Analyse',
     topics: [
-      { title: 'Fonctions polynômes', href: '/secondary/class2/exercices/fonctions-polynomes' },
-      { title: 'Fonctions rationnelles', href: '/secondary/class2/exercices/fonctions-rationnelles' },
-      { title: 'Limites et continuité', href: '/secondary/class2/exercices/limites-continuite' },
-      { title: 'Dérivation', href: '/secondary/class2/exercices/derivation' }
+      { title: 'Fonctions polynômes', href: '/secondary/class2/exercice/fonctions-polynomes' },
+      { title: 'Fonctions rationnelles', href: '/secondary/class2/exercice/fonctions-rationnelles' },
+      { title: 'Limites et continuité', href: '/secondary/class2/exercice/limites-continuite' },
+      { title: 'Dérivation', href: '/secondary/class2/exercice/derivation' }
     ]
   },
   {
     title: 'Géométrie',
     topics: [
-      { title: 'Vecteurs du plan', href: '/secondary/class2/exercices/vecteurs-plan' },
-      { title: 'Produit scalaire', href: '/secondary/class2/exercices/produit-scalaire' },
-      { title: 'Configurations géométriques', href: '/secondary/class2/exercices/configurations' },
-      { title: 'Transformations', href: '/secondary/class2/exercices/transformations' }
+      { title: 'Vecteurs du plan', href: '/secondary/class2/exercice/vecteurs-plan' },
+      { title: 'Produit scalaire', href: '/secondary/class2/exercice/produit-scalaire' },
+      { title: 'Configurations géométriques', href: '/secondary/class2/exercice/configurations' },
+      { title: 'Transformations', href: '/secondary/class2/exercice/transformations' }
     ]
   },
   {
     title: 'Suites Numériques',
     topics: [
-      { title: 'Suites arithmétiques', href: '/secondary/class2/exercices/suites-arithmetiques' },
-      { title: 'Suites géométriques', href: '/secondary/class2/exercices/suites-geometriques' },
-      { title: 'Suites récurrentes', href: '/secondary/class2/exercices/suites-recurrentes' },
-      { title: 'Limites de suites', href: '/secondary/class2/exercices/limites-suites' }
+      { title: 'Suites arithmétiques', href: '/secondary/class2/exercice/suites-arithmetiques' },
+      { title: 'Suites géométriques', href: '/secondary/class2/exercice/suites-geometriques' },
+      { title: 'Suites récurrentes', href: '/secondary/class2/exercice/suites-recurrentes' },
+      { title: 'Limites de suites', href: '/secondary/class2/exercice/limites-suites' }
     ]
   },
   {
     title: 'Statistiques et Probabilités',
     topics: [
-      { title: 'Statistiques descriptives', href: '/secondary/class2/exercices/statistiques' },
-      { title: 'Probabilités conditionnelles', href: '/secondary/class2/exercices/probabilites' },
-      { title: 'Variables aléatoires', href: '/secondary/class2/exercices/variables-aleatoires' },
-      { title: 'Loi binomiale', href: '/secondary/class2/exercices/loi-binomiale' }
+      { title: 'Statistiques descriptives', href: '/secondary/class2/exercice/statistiques' },
+      { title: 'Probabilités conditionnelles', href: '/secondary/class2/exercice/probabilites' },
+      { title: 'Variables aléatoires', href: '/secondary/class2/exercice/variables-aleatoires' },
+      { title: 'Loi binomiale', href: '/secondary/class2/exercice/loi-binomiale' }
     ]
   }
 ];

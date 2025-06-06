@@ -13,7 +13,7 @@ const resources = [
   },
   {
     title: 'Exercices',
-    href: '/secondary/class3/pc-svt/exercices',
+    href: '/secondary/class3/pc-svt/exercice',
     description: 'Exercices d\'application et de pratique'
   },
   {
