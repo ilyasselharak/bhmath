@@ -1,9 +1,6 @@
-import Link from 'next/link';
+'use client';
 
-export const metadata = {
-  title: 'BHMaths - Accueil',
-  description: 'Ressources mathématiques pour le collège et le lycée au Maroc',
-};
+import Link from 'next/link';
 
 const pricingPlans = [
   {
@@ -17,7 +14,8 @@ const pricingPlans = [
     ],
     buttonText: 'Commencer',
     buttonLink: '/course',
-    highlighted: false
+    highlighted: false,
+    isSubscription: false
   },
   {
     name: 'Premium',
@@ -32,8 +30,9 @@ const pricingPlans = [
       'Résumés exclusifs'
     ],
     buttonText: 'S\'abonner',
-    buttonLink: '/premium',
-    highlighted: true
+    buttonLink: '#',
+    highlighted: true,
+    isSubscription: true
   },
   {
     name: 'Annuel',
@@ -48,12 +47,29 @@ const pricingPlans = [
       'Résumés personnalisés'
     ],
     buttonText: 'S\'abonner',
-    buttonLink: '/premium/annual',
-    highlighted: false
+    buttonLink: '#',
+    highlighted: false,
+    isSubscription: true
   }
 ];
 
 export default function HomePage() {
+  const generateWhatsAppMessage = (planName, price, period) => {
+    const message = `Bonjour ! Je souhaite m'abonner au forfait ${planName} de BHMaths au prix de ${price}${period}. Pouvez-vous me donner plus d'informations sur le processus d'abonnement ?`;
+    const encodedMessage = encodeURIComponent(message);
+    return `https://wa.me/2126295041077?text=${encodedMessage}`;
+  };
+
+  const handleSubscriptionClick = (plan) => {
+    if (plan.isSubscription) {
+      const whatsappUrl = generateWhatsAppMessage(plan.name, plan.price, plan.period);
+      window.open(whatsappUrl, '_blank');
+    } else {
+      // For non-subscription plans, use the regular link
+      window.location.href = plan.buttonLink;
+    }
+  };
+
   return (
     <>
       <main className="py-12">
@@ -160,16 +176,29 @@ export default function HomePage() {
                   ))}
                 </ul>
 
-                <Link
-                  href={plan.buttonLink}
-                  className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
-                    plan.highlighted
-                      ? 'bg-orange-500 text-white hover:bg-orange-600'
-                      : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-                  }`}
-                >
-                  {plan.buttonText}
-                </Link>
+                {plan.isSubscription ? (
+                  <button
+                    onClick={() => handleSubscriptionClick(plan)}
+                    className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                      plan.highlighted
+                        ? 'bg-orange-500 text-white hover:bg-orange-600'
+                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                    }`}
+                  >
+                    {plan.buttonText}
+                  </button>
+                ) : (
+                  <Link
+                    href={plan.buttonLink}
+                    className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                      plan.highlighted
+                        ? 'bg-orange-500 text-white hover:bg-orange-600'
+                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                    }`}
+                  >
+                    {plan.buttonText}
+                  </Link>
+                )}
               </div>
             ))}
           </div>

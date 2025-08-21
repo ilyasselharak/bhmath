@@ -67,17 +67,27 @@ export default function MainHeader() {
                 <div className="flex items-center space-x-2">
                   <img
                     src={user.avatar}
-                    alt={user.username}
+                    alt={user.fullName || user.username}
                     className="h-8 w-8 rounded-full"
                   />
-                  <span className="text-gray-700 font-medium">{user.username}</span>
+                  <span className="text-gray-700 font-medium">
+                    {user.fullName || user.username}
+                  </span>
                 </div>
-                <button
-                  onClick={logout}
-                  className="text-gray-600 hover:text-orange-500 font-medium"
-                >
-                  Déconnexion
-                </button>
+                <div className="flex items-center space-x-2">
+                  <Link
+                    href="/profile"
+                    className="text-gray-600 hover:text-orange-500 font-medium px-3 py-2 rounded-lg hover:bg-orange-50 transition-colors"
+                  >
+                    Profil
+                  </Link>
+                  <button
+                    onClick={logout}
+                    className="text-gray-600 hover:text-orange-500 font-medium px-3 py-2 rounded-lg hover:bg-orange-50 transition-colors"
+                  >
+                    Déconnexion
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="flex items-center space-x-4">
