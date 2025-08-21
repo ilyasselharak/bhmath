@@ -12,7 +12,7 @@ export default function TopHeader() {
         <div className="flex justify-between items-center h-10">
           {/* Contact Info */}
           <div className="flex items-center space-x-4 text-sm">
-            <a href="tel:+2126295041077" className="hover:text-orange-400">
+            <a href="tel:+212629504107" className="hover:text-orange-400">
               <span className="hidden sm:inline">Téléphone:</span> +212 629-504107
             </a>
             <a href="mailto:contact@bhmaths.com" className="hover:text-orange-400">

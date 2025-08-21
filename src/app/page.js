@@ -57,7 +57,7 @@ export default function HomePage() {
   const generateWhatsAppMessage = (planName, price, period) => {
     const message = `Bonjour ! Je souhaite m'abonner au forfait ${planName} de BHMaths au prix de ${price}${period}. Pouvez-vous me donner plus d'informations sur le processus d'abonnement ?`;
     const encodedMessage = encodeURIComponent(message);
-    return `https://wa.me/2126295041077?text=${encodedMessage}`;
+    return `https://wa.me/212629504107?text=${encodedMessage}`;
   };
 
   const handleSubscriptionClick = (plan) => {
@@ -213,7 +213,7 @@ export default function HomePage() {
                 Notre équipe d'experts est disponible pour répondre à vos questions et vous accompagner dans votre apprentissage
               </p>
               <a
-                href="https://wa.me/2126295041077"
+                href="https://wa.me/212629504107"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
