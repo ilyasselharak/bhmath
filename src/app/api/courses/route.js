@@ -22,39 +22,39 @@ async function getCourses(level) {
 
   switch (level) {
     case "firstCollege":
-      return await FirstCollegeCourse.find().sort({ createdAt: -1 });
+      return await FirstCollegeCourse.find().sort({ createdAt: 1 });
     case "secondCollege":
-      return await SecondCollegeCourse.find().sort({ createdAt: -1 });
+      return await SecondCollegeCourse.find().sort({ createdAt: 1 });
     case "thirdCollege":
-      return await ThirdCollegeCourse.find().sort({ createdAt: -1 });
+      return await ThirdCollegeCourse.find().sort({ createdAt: 1 });
     case "TroncCommunSc":
-      return await CommonCoreScienceCourse.find().sort({ createdAt: -1 });
+      return await CommonCoreScienceCourse.find().sort({ createdAt: 1 });
     case "TroncCommunTech":
-      return await CommonCoreTechnicalCourse.find().sort({ createdAt: -1 });
+      return await CommonCoreTechnicalCourse.find().sort({ createdAt: 1 });
     case "TroncCommun":
-      return await CommonCoreScienceCourse.find().sort({ createdAt: -1 });
+      return await CommonCoreScienceCourse.find().sort({ createdAt: 1 });
     case "TroncCommunLettre":
-      return await CommonCoreLettersCourse.find().sort({ createdAt: -1 });
+      return await CommonCoreLettersCourse.find().sort({ createdAt: 1 });
     case "firstBacMath":
-      return await FirstBacMathCourse.find().sort({ createdAt: -1 });
+      return await FirstBacMathCourse.find().sort({ createdAt: 1 });
     case "firstBacScience":
-      return await FirstBacScienceCourse.find().sort({ createdAt: -1 });
+      return await FirstBacScienceCourse.find().sort({ createdAt: 1 });
     case "firstBacEconomics":
-      return await FirstBacEconomicsCourse.find().sort({ createdAt: -1 });
+      return await FirstBacEconomicsCourse.find().sort({ createdAt: 1 });
     case "firstBacLetters":
-      return await FirstBacLettersCourse.find().sort({ createdAt: -1 });
+      return await FirstBacLettersCourse.find().sort({ createdAt: 1 });
     case "2BacMathA":
-      return await SecondBacMathACourse.find().sort({ createdAt: -1 });
+      return await SecondBacMathACourse.find().sort({ createdAt: 1 });
     case "2BacMathB":
-      return await SecondBacMathBCourse.find().sort({ createdAt: -1 });
+      return await SecondBacMathBCourse.find().sort({ createdAt: 1 });
     case "2BacLetters":
-      return await SecondBacLettersCourse.find().sort({ createdAt: -1 });
+      return await SecondBacLettersCourse.find().sort({ createdAt: 1 });
     case "2BacPCSVT":
-      return await SecondBacPhysicsChemistryLifeSciencesCourse.find().sort({ createdAt: -1 });
+      return await SecondBacPhysicsChemistryLifeSciencesCourse.find().sort({ createdAt: 1 });
     case "2BacTCT":
-      return await SecondBacTechnicalCommonCourse.find().sort({ createdAt: -1 });
+      return await SecondBacTechnicalCommonCourse.find().sort({ createdAt: 1 });
     case "2BacEco":
-      return await SecondBacEconomicsCourse.find().sort({ createdAt: -1 });
+      return await SecondBacEconomicsCourse.find().sort({ createdAt: 1 });
     default:
       return [];
   }
