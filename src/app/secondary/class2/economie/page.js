@@ -18,7 +18,7 @@ const resources = [
   },
   {
     title: 'Devoirs',
-    href: '/devoire/firstBacEconomics',
+    href: '/devoir/firstBacEconomics',
     description: 'Devoirs et examens corrigés'
   },
   {
