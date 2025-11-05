@@ -13,12 +13,12 @@ const resources = [
   },
   {
     title: 'Exercices',
-    href: '/secondary/class3/lettres/exercice',
+    href: '/exercice/2BacTCT',
     description: 'Exercices d\'application et de pratique'
   },
   {
     title: 'Devoirs',
-    href: '/secondary/class3/lettres/devoirs',
+    href: '/devoir/2BacTCT',
     description: 'Devoirs et examens corrigés'
   },
   {

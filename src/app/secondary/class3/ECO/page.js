@@ -13,12 +13,12 @@ const resources = [
   },
   {
     title: 'Exercices',
-    href: '/secondary/class3/ECO/exercice',
+    href: '/exercice/2BacEco',
     description: 'Exercices d\'application et de pratique'
   },
   {
     title: 'Devoirs',
-    href: '/secondary/class3/ECO/devoirs',
+    href: '/devoir/2BacEco',
     description: 'Devoirs et examens corrigés'
   },
   {

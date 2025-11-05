@@ -10,6 +10,7 @@
     "init-2bacmath": "node -r esm src/scripts/init-2bacmath-courses.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.17",
     "bcryptjs": "^3.0.2",
     "jsonwebtoken": "^9.0.2",

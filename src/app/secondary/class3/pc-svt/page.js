@@ -13,12 +13,12 @@ const resources = [
   },
   {
     title: 'Exercices',
-    href: '/secondary/class3/pc-svt/exercice',
+    href: '/exercice/2BacPCSVT',
     description: 'Exercices d\'application et de pratique'
   },
   {
     title: 'Devoirs',
-    href: '/secondary/class3/pc-svt/devoirs',
+    href: '/devoir/2BacPCSVT',
     description: 'Devoirs et examens corrigés'
   },
   {

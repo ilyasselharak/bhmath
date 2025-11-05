@@ -31,7 +31,7 @@ const levelToModel = {
   '2BacMathB': SecondBacMathBDevoir,
   '2BacLettres': SecondBacLettersDevoir,
   '2BacEco': SecondBacEconomicsDevoir,
-  '2BacPcSvt': SecondBacPhysicsChemistryLifeSciencesDevoir,
+  '2BacPCSVT': SecondBacPhysicsChemistryLifeSciencesDevoir,
   '2BacTech': SecondBacTechnicalCommonDevoir,
   'firstCollege': FirstCollegeDevoir,
   'secondCollege': SecondCollegeDevoir,
