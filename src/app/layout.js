@@ -34,6 +34,9 @@ export const metadata = {
     locale: 'fr_FR',
     type: 'website',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-3523606019399197',
+  },
 }
 
 export const viewport = {
