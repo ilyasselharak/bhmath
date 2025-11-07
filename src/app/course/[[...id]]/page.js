@@ -107,7 +107,7 @@ export default async function CoursePage({ params }) {
     return (
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-6 pb-3 border-b-2 border-green-100">
             {filteredCourse[0].name}
           </h2>
           <div 
@@ -136,7 +136,7 @@ export default async function CoursePage({ params }) {
         {filteredCourse.length > 0 ? (
           <div className="max-w-5xl mx-auto px-4">
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-6 pb-3 border-b-2 border-green-100">
                 {filteredCourse[0].name}
               </h2>
               <div className="space-y-8">
@@ -174,10 +174,10 @@ export default async function CoursePage({ params }) {
                 {courses.map((course) => (
                   <div
                     key={course._id}
-                    className="bg-white rounded-xl p-6 shadow-lg border border-[#e3eaf4]"
+                    className="bg-white rounded-xl p-6 shadow-lg border border-[#e3eaf4] hover:shadow-xl transition-all duration-300 hover:border-green-200"
                   >
                     <div className="space-y-4">
-                      <h2 className="text-xl font-semibold text-gray-800">
+                      <h2 className="text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent leading-tight">
                         {course.name}
                       </h2>
                       <div className="flex flex-col space-y-3">
