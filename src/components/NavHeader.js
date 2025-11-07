@@ -229,6 +229,16 @@ export default function NavHeader() {
                 )}
               </div>
             ))}
+            
+            {/* Les Livres Link */}
+            <Link
+              href="/livres"
+              className={`text-white hover:text-orange-100 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isActive('/livres') ? 'bg-orange-600' : ''
+              }`}
+            >
+              Les Livres
+            </Link>
           </div>
         </div>
       </div>

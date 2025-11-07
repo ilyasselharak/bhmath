@@ -434,6 +434,13 @@ export default function MainHeader() {
           <div className="flex-1 overflow-y-auto p-4">
             <nav className="space-y-2">
               <Link
+                href="/livres"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
+              >
+                📚 Les Livres
+              </Link>
+              <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
