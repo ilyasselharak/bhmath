@@ -183,12 +183,12 @@ export default async function CoursePage({ params }) {
                       <div className="flex flex-col space-y-3">
                         <Link
                           href={`/course/${level}/${course.id}/content`}
-                          className="flex items-center justify-between bg-gray-50 hover:bg-[#e3eaf4] rounded-lg p-4 transition-all duration-300"
+                          className="flex items-center justify-between bg-orange-500 hover:bg-orange-200 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 border border-white/30"
                         >
-                          <span className="text-gray-800 font-medium">
+                          <span className="text-white font-medium">
                             Cours
                           </span>
-                          <div className="text-[#003566]">
+                          <div className="text-white">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="h-5 w-5"
