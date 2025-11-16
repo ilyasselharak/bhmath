@@ -31,7 +31,7 @@ const resources = [
 export default function SecondBacLettresPage() {
   return (
     <main className="py-12">
-      <div className="bg-gradient-to-r from-orange-200 to-orange-400 text-black rounded-2xl py-16 mb-12 mx-4">
+      <div className="bg-gradient-to-r from-blue-200 to-blue-400 text-black rounded-2xl py-16 mb-12 mx-4">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">
             2ème Bac - Section Lettres
@@ -48,7 +48,7 @@ export default function SecondBacLettresPage() {
             <Link 
               key={index}
               href={resource.href}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-l-4 border-blue-500"
             >
               <div className="text-center">
                 <h2 className="text-xl font-semibold text-gray-800 mb-3">
@@ -57,7 +57,7 @@ export default function SecondBacLettresPage() {
                 <p className="text-gray-600 mb-4">
                   {resource.description}
                 </p>
-                <div className="inline-block bg-orange-500 text-white text-sm px-4 py-2 rounded-full">
+                <div className="inline-block bg-blue-500 text-white text-sm px-4 py-2 rounded-full">
                   Accéder aux {resource.title.toLowerCase()}
                 </div>
               </div>

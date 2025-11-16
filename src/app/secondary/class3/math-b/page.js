@@ -45,6 +45,7 @@ export default function SecondBacMathB() {
       title="2ème Bac - Sciences Mathématiques B"
       description="Cours, exercices et préparation aux examens nationaux"
       sections={sections}
+      colorScheme="blue"
     />
   );
 } 

@@ -46,7 +46,7 @@ const categories = [
 export default function TerminalBacExercisesPage() {
   return (
     <main className="py-12">
-      <div className="bg-gradient-to-r from-orange-200 to-orange-400 text-black rounded-2xl py-16 mb-12 mx-4">
+      <div className="bg-gradient-to-r from-blue-200 to-blue-400 text-black rounded-2xl py-16 mb-12 mx-4">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">
             Exercices Terminal Baccalauréat
@@ -75,13 +75,13 @@ export default function TerminalBacExercisesPage() {
                   <Link
                     key={topicIndex}
                     href={topic.href}
-                    className="block bg-gray-50 hover:bg-orange-50 rounded-lg p-4 transition-all duration-300"
+                    className="block bg-gray-50 hover:bg-blue-50 rounded-lg p-4 transition-all duration-300"
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-gray-800 font-medium">
                         {topic.title}
                       </span>
-                      <div className="text-orange-500">
+                      <div className="text-blue-500">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                         </svg>

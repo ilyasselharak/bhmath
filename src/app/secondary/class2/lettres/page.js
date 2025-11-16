@@ -35,6 +35,7 @@ export default function FirstBacLiterature() {
       title="1ère Bac - Lettres"
       description="Cours, exercices et devoirs de mathématiques pour Lettres"
       sections={sections}
+      colorScheme="blue"
     />
   );
 } 

@@ -40,6 +40,7 @@ export default function SecondBacMathA() {
       title="2ème année Bac - Mathématiques A"
       description="Cours, exercices et devoirs de mathématiques"
       sections={sections}
+      colorScheme="blue"
     />
   );
 } 

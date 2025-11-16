@@ -35,6 +35,7 @@ export default function FirstBacMath() {
       title="Première année Bac - Sciences Mathématiques"
       description="Cours, exercices et devoirs de mathématiques"
       sections={sections}
+      colorScheme="blue"
     />
   );
 } 

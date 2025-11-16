@@ -30,6 +30,7 @@ export default function FirstBacPCSVT() {
       title="1ère Bac - Sciences PC-SVT"
       description="Cours, exercices et devoirs de mathématiques pour PC-SVT"
       sections={sections}
+      colorScheme="blue"
     />
   );
 } 
