@@ -25,6 +25,7 @@ export default function LivresPage() {
       }
       const data = await response.json();
       setBooks(data.books || []);
+      console.log(data.books);
       setPagination(data.pagination);
     } catch (err) {
       setError('Erreur lors du chargement des livres. Veuillez réessayer.');
@@ -80,8 +81,8 @@ export default function LivresPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {books.map((book) => (
                     <Link
-                      key={book.id}
-                      href={`/livres/${book.id}`}
+                      key={book._id}
+                      href={`/livres/${book._id}`}
                       className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden"
                     >
                       {book.image ? (
