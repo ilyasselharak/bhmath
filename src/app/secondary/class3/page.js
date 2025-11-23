@@ -1,9 +1,8 @@
-import ClassTemplate from '@/components/ClassTemplate';
+'use client';
 
-export const metadata = {
-  title: '2ème année du Baccalauréat | BHMath',
-  description: 'Ressources mathématiques pour la 2ème année du Baccalauréat',
-};
+import { useState, useEffect } from 'react';
+import ClassTemplate from '@/components/ClassTemplate';
+import PageDescriptionModal from '@/components/PageDescriptionModal';
 
 const stats = [
   { value: '25+', label: 'Chapitres' },
@@ -81,15 +80,52 @@ const sections = [
 ];
 
 export default function SecondBac() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const [description, setDescription] = useState(null);
+  const [error, setError] = useState(null);
+ 
+  const fetchDescription = async () => {
+    setLoading(true);
+    
+    setError(null);
+    try {
+      const response = await fetch(`/api/page-descriptions?path=${encodeURIComponent('/secondary/class3')}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        setDescription(data);
+      } else if (response.status === 404) {
+        setError('Description not found');
+      } else {
+        setError('Failed to load description');
+      }
+    } catch (err) {
+      console.error('Error fetching description:', err);
+      setError('Failed to load description');
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchDescription();
+    
+  }, []);
   return (
-    <ClassTemplate
-      title="2ème année du Baccalauréat"
-      description="Choisissez votre filière pour accéder aux ressources"
-      objectives="Préparez-vous intensivement au baccalauréat avec nos ressources complètes. Maîtrisez tous les chapitres et réussissez votre examen avec confiance."
-      sections={sections}
-      curriculum={curriculum}
-      stats={stats}
-      colorScheme="blue"
-    />
+    <>
+      <ClassTemplate
+        title="2ème année du Baccalauréat"
+        description="Choisissez votre filière pour accéder aux ressources"
+        objectives="Préparez-vous intensivement au baccalauréat avec nos ressources complètes. Maîtrisez tous les chapitres et réussissez votre examen avec confiance."
+        sections={sections}
+        curriculum={curriculum}
+        stats={stats}
+        descriptions={description?.description}
+        colorScheme="blue"
+        onInfoClick={() => setIsModalOpen(true)}
+      />
+      
+    </>
   );
 } 

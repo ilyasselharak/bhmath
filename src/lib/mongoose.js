@@ -57,3 +57,6 @@ export function getModel(modelName, schema) {
   cached.models.set(modelName, model);
   return model;
 }
+
+// Default export for backward compatibility with existing scripts
+export default initMongoose;

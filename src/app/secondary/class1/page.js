@@ -1,9 +1,8 @@
-import Link from 'next/link';
+'use client';
 
-export const metadata = {
-  title: 'Tronc Commun | BHMath',
-  description: 'Ressources mathématiques pour le tronc commun du Baccalauréat',
-};
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import PageDescriptionModal from '@/components/PageDescriptionModal';
 
 const stats = [
   { value: '12+', label: 'Chapitres' },
@@ -37,6 +36,41 @@ const specializations = [
 ];
 
 export default function FirstBacPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [pageDescription, setPageDescription] = useState(null);
+
+  const [loading, setLoading] = useState(false);
+
+  const [description, setDescription] = useState(null);
+  const [error, setError] = useState(null);
+ 
+  const fetchDescription = async () => {
+    setLoading(true);
+    
+    setError(null);
+    try {
+      const response = await fetch(`/api/page-descriptions?path=${encodeURIComponent('/secondary/class1')}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        setDescription(data);
+      } else if (response.status === 404) {
+        setError('Description not found');
+      } else {
+        setError('Failed to load description');
+      }
+    } catch (err) {
+      console.error('Error fetching description:', err);
+      setError('Failed to load description');
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchDescription();
+    
+  }, []);
+
   return (
     <main className="py-12">
       <div className="bg-gradient-to-r from-blue-200 to-blue-400 text-black rounded-2xl py-16 mb-12 mx-4">
@@ -47,10 +81,29 @@ export default function FirstBacPage() {
           <p className="text-lg md:text-xl opacity-90 mb-4">
             Première année du Baccalauréat
           </p>
-          <p className="text-base md:text-lg opacity-80 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg opacity-80 max-w-2xl mx-auto mb-4">
             Choisissez votre filière pour accéder aux ressources mathématiques adaptées à votre parcours. 
             Des cours complets pour bien démarrer votre baccalauréat.
           </p>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="inline-flex items-center px-4 py-2 bg-white bg-opacity-90 hover:bg-opacity-100 text-blue-600 font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+          >
+            <svg
+              className="h-5 w-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            En savoir plus
+          </button>
         </div>
       </div>
 
@@ -109,7 +162,11 @@ export default function FirstBacPage() {
             ))}
           </div>
         </div>
+        <div>
+        {description?.description}
       </div>
+      </div>
+
     </main>
   );
 } 

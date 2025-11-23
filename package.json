@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "init-2bacmath": "node -r esm src/scripts/init-2bacmath-courses.js"
+    "init-2bacmath": "node -r esm src/scripts/init-2bacmath-courses.js",
+    "seed-page-descriptions": "node -r esm src/scripts/seed-page-descriptions.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
