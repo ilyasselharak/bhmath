@@ -46,7 +46,7 @@ export async function POST(request) {
     await initMongoose();
     
     const body = await request.json();
-    const { title, content, image, description, author } = body;
+    const { title, content, image, description, author, pdfUrl } = body;
 
     // Validate required fields
     if (!title || !content) {
@@ -61,7 +61,8 @@ export async function POST(request) {
       content,
       image: image || null,
       description: description || null,
-      author: author || null
+      author: author || null,
+      pdfUrl: pdfUrl || null
     });
 
     await book.save();

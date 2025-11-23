@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '@/app/context/AuthContext';
@@ -150,7 +151,14 @@ export default function MainHeader() {
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">
-              <span className="text-2xl md:text-3xl font-bold text-orange-500">BHMaths</span>
+              <Image
+                src="/bhmaths.png"
+                alt="BHMaths"
+                width={120}
+                height={80}
+                className="h-10 md:h-32 w-auto"
+                priority
+              />
             </Link>
 
             {/* Search Bar - Hidden on mobile, shown on tablet+ */}

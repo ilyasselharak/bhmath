@@ -34,7 +34,7 @@ export async function PUT(request, { params }) {
     
     const { id } = params;
     const body = await request.json();
-    const { title, content, image, description, author } = body;
+    const { title, content, image, description, author, pdfUrl } = body;
 
     const book = await Book.findById(id);
 
@@ -51,6 +51,7 @@ export async function PUT(request, { params }) {
     if (image !== undefined) book.image = image;
     if (description !== undefined) book.description = description;
     if (author !== undefined) book.author = author;
+    if (pdfUrl !== undefined) book.pdfUrl = pdfUrl;
 
     await book.save();
 
